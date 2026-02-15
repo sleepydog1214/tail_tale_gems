@@ -1,0 +1,64 @@
+﻿{
+  "level_id": 28,
+  "chapter": 1,
+  "room": 1,
+  "difficulty": "HARD",
+  "title": "Power Surge",
+
+  "board": {
+    "width": 7,
+    "height": 9,
+    "layout": [
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1]
+    ],
+    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST", "DIAMOND"]
+  },
+
+  "move_limit": 22,
+
+  "objectives": [
+    {
+      "type": "CREATE_POWERUP",
+      "params": { "powerup": "BOMB", "powerup_name": "Bombs", "count": 2 }
+    },
+    {
+      "type": "CREATE_POWERUP",
+      "params": { "powerup": "ROCKET_H", "powerup_name": "Rockets", "count": 2 }
+    }
+  ],
+
+  "blockers": [
+    { "row": 2, "col": 2, "type": "CHAIN", "hp": 1 },
+    { "row": 2, "col": 4, "type": "CHAIN", "hp": 1 },
+    { "row": 4, "col": 1, "type": "CHAIN", "hp": 1 },
+    { "row": 4, "col": 5, "type": "CHAIN", "hp": 1 },
+    { "row": 6, "col": 2, "type": "CHAIN", "hp": 1 },
+    { "row": 6, "col": 4, "type": "CHAIN", "hp": 1 }
+  ],
+  "special_tiles": [],
+  "portals": [],
+  "conveyors": [],
+
+  "rewards": {
+    "coins_base": 85,
+    "coins_per_remaining_move": 12,
+    "star_thresholds": {
+      "1_star": 0,
+      "2_star": 7,
+      "3_star": 14
+    }
+  },
+
+  "metadata": {
+    "designer": "auto",
+    "notes": "Create multiple power-ups with 6 colors"
+  }
+}

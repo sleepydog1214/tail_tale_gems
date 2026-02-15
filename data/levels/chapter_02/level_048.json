@@ -1,0 +1,76 @@
+﻿{
+  "level_id": 48,
+  "chapter": 2,
+  "room": 1,
+  "difficulty": "HARD",
+  "title": "Endurance",
+
+  "board": {
+    "width": 7,
+    "height": 9,
+    "layout": [
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1]
+    ],
+    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST", "DIAMOND"]
+  },
+
+  "move_limit": 18,
+
+  "objectives": [
+    {
+      "type": "REMOVE_BLOCKER",
+      "params": { "blocker": "REINFORCED_CRATE", "count": 8 }
+    },
+    {
+      "type": "REMOVE_BLOCKER",
+      "params": { "blocker": "ICE", "count": 6 }
+    },
+    {
+      "type": "SCORE_TARGET",
+      "params": { "score": 3000 }
+    }
+  ],
+
+  "blockers": [
+    { "row": 1, "col": 1, "type": "REINFORCED_CRATE", "hp": 2 },
+    { "row": 1, "col": 3, "type": "REINFORCED_CRATE", "hp": 2 },
+    { "row": 1, "col": 5, "type": "REINFORCED_CRATE", "hp": 2 },
+    { "row": 4, "col": 1, "type": "REINFORCED_CRATE", "hp": 2 },
+    { "row": 4, "col": 5, "type": "REINFORCED_CRATE", "hp": 2 },
+    { "row": 7, "col": 1, "type": "REINFORCED_CRATE", "hp": 2 },
+    { "row": 7, "col": 3, "type": "REINFORCED_CRATE", "hp": 2 },
+    { "row": 7, "col": 5, "type": "REINFORCED_CRATE", "hp": 2 },
+    { "row": 3, "col": 2, "type": "ICE", "hp": 1 },
+    { "row": 3, "col": 4, "type": "ICE", "hp": 1 },
+    { "row": 5, "col": 2, "type": "ICE", "hp": 1 },
+    { "row": 5, "col": 4, "type": "ICE", "hp": 1 },
+    { "row": 4, "col": 3, "type": "ICE", "hp": 1 },
+    { "row": 0, "col": 3, "type": "ICE", "hp": 1 }
+  ],
+  "special_tiles": [],
+  "portals": [],
+  "conveyors": [],
+
+  "rewards": {
+    "coins_base": 100,
+    "coins_per_remaining_move": 15,
+    "star_thresholds": {
+      "1_star": 0,
+      "2_star": 4,
+      "3_star": 8
+    }
+  },
+
+  "metadata": {
+    "designer": "auto",
+    "notes": "8 reinforced crates + 6 ICE"
+  }
+}

@@ -1,0 +1,70 @@
+﻿{
+  "level_id": 49,
+  "chapter": 2,
+  "room": 1,
+  "difficulty": "HARD",
+  "title": "Final Challenge",
+
+  "board": {
+    "width": 7,
+    "height": 9,
+    "layout": [
+      [1,0,1,1,1,0,1],
+      [1,1,1,1,1,1,1],
+      [0,1,1,1,1,1,0],
+      [1,1,1,0,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,0,1,1,1],
+      [0,1,1,1,1,1,0],
+      [1,1,1,1,1,1,1],
+      [1,0,1,1,1,0,1]
+    ],
+    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST", "DIAMOND"]
+  },
+
+  "move_limit": 18,
+
+  "objectives": [
+    {
+      "type": "REMOVE_BLOCKER",
+      "params": { "blocker": "VASE", "count": 4 }
+    },
+    {
+      "type": "REMOVE_BLOCKER",
+      "params": { "blocker": "CHAIN", "count": 4 }
+    },
+    {
+      "type": "CREATE_POWERUP",
+      "params": { "powerup": "BOMB", "powerup_name": "Bombs", "count": 2 }
+    }
+  ],
+
+  "blockers": [
+    { "row": 1, "col": 2, "type": "VASE", "hp": 3 },
+    { "row": 1, "col": 4, "type": "VASE", "hp": 3 },
+    { "row": 7, "col": 2, "type": "VASE", "hp": 3 },
+    { "row": 7, "col": 4, "type": "VASE", "hp": 3 },
+    { "row": 2, "col": 1, "type": "CHAIN", "hp": 1 },
+    { "row": 2, "col": 5, "type": "CHAIN", "hp": 1 },
+    { "row": 6, "col": 1, "type": "CHAIN", "hp": 1 },
+    { "row": 6, "col": 5, "type": "CHAIN", "hp": 1 }
+  ],
+  "special_tiles": [],
+  "portals": [],
+  "conveyors": [],
+
+  "rewards": {
+    "coins_base": 100,
+    "coins_per_remaining_move": 15,
+    "star_thresholds": {
+      "1_star": 0,
+      "2_star": 4,
+      "3_star": 8
+    }
+  },
+
+  "metadata": {
+    "designer": "auto",
+    "notes": "Near-final challenge with complex board"
+  }
+}

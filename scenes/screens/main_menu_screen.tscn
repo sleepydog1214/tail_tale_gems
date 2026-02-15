@@ -87,5 +87,5 @@ offset_top = -40.0
 offset_right = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "v0.2.0 — Phase 2"
+text = "v0.3.0 — Phase 3"
 horizontal_alignment = 1

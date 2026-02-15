@@ -1,0 +1,62 @@
+﻿{
+  "level_id": 37,
+  "chapter": 2,
+  "room": 1,
+  "difficulty": "MEDIUM",
+  "title": "Color Crush",
+
+  "board": {
+    "width": 7,
+    "height": 9,
+    "layout": [
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1]
+    ],
+    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST", "DIAMOND"]
+  },
+
+  "move_limit": 22,
+
+  "objectives": [
+    {
+      "type": "COLLECT_COLOR",
+      "params": { "color": "RUBY", "count": 20 }
+    },
+    {
+      "type": "COLLECT_COLOR",
+      "params": { "color": "EMERALD", "count": 20 }
+    }
+  ],
+
+  "blockers": [
+    { "row": 4, "col": 0, "type": "STONE", "hp": 0 },
+    { "row": 4, "col": 6, "type": "STONE", "hp": 0 },
+    { "row": 0, "col": 3, "type": "STONE", "hp": 0 },
+    { "row": 8, "col": 3, "type": "STONE", "hp": 0 }
+  ],
+  "special_tiles": [],
+  "portals": [],
+  "conveyors": [],
+
+  "rewards": {
+    "coins_base": 80,
+    "coins_per_remaining_move": 12,
+    "star_thresholds": {
+      "1_star": 0,
+      "2_star": 7,
+      "3_star": 14
+    }
+  },
+
+  "metadata": {
+    "designer": "auto",
+    "notes": "Dual color objective with stones"
+  }
+}

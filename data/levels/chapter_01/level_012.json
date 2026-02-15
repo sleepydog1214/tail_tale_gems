@@ -1,0 +1,64 @@
+﻿{
+  "level_id": 12,
+  "chapter": 1,
+  "room": 1,
+  "difficulty": "EASY",
+  "title": "Crystal Corridor",
+
+  "board": {
+    "width": 7,
+    "height": 9,
+    "layout": [
+      [0,1,1,1,1,1,0],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [0,1,1,1,1,1,0]
+    ],
+    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ"]
+  },
+
+  "move_limit": 28,
+
+  "objectives": [
+    {
+      "type": "COLLECT_COLOR",
+      "params": { "color": "SAPPHIRE", "count": 20 }
+    },
+    {
+      "type": "REMOVE_BLOCKER",
+      "params": { "blocker": "ICE", "count": 6 }
+    }
+  ],
+
+  "blockers": [
+    { "row": 1, "col": 1, "type": "ICE", "hp": 1 },
+    { "row": 1, "col": 5, "type": "ICE", "hp": 1 },
+    { "row": 3, "col": 3, "type": "ICE", "hp": 1 },
+    { "row": 5, "col": 3, "type": "ICE", "hp": 1 },
+    { "row": 7, "col": 1, "type": "ICE", "hp": 1 },
+    { "row": 7, "col": 5, "type": "ICE", "hp": 1 }
+  ],
+  "special_tiles": [],
+  "portals": [],
+  "conveyors": [],
+
+  "rewards": {
+    "coins_base": 65,
+    "coins_per_remaining_move": 8,
+    "star_thresholds": {
+      "1_star": 0,
+      "2_star": 9,
+      "3_star": 18
+    }
+  },
+
+  "metadata": {
+    "designer": "auto",
+    "notes": "More ICE, shaped board"
+  }
+}

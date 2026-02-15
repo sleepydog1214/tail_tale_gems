@@ -1,0 +1,64 @@
+﻿{
+  "level_id": 38,
+  "chapter": 2,
+  "room": 1,
+  "difficulty": "HARD",
+  "title": "Bomb Rush",
+
+  "board": {
+    "width": 7,
+    "height": 9,
+    "layout": [
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1]
+    ],
+    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
+  },
+
+  "move_limit": 22,
+
+  "objectives": [
+    {
+      "type": "CREATE_POWERUP",
+      "params": { "powerup": "BOMB", "powerup_name": "Bombs", "count": 3 }
+    },
+    {
+      "type": "REMOVE_BLOCKER",
+      "params": { "blocker": "CHAIN", "count": 6 }
+    }
+  ],
+
+  "blockers": [
+    { "row": 1, "col": 2, "type": "CHAIN", "hp": 1 },
+    { "row": 1, "col": 4, "type": "CHAIN", "hp": 1 },
+    { "row": 3, "col": 1, "type": "CHAIN", "hp": 1 },
+    { "row": 3, "col": 5, "type": "CHAIN", "hp": 1 },
+    { "row": 5, "col": 2, "type": "CHAIN", "hp": 1 },
+    { "row": 5, "col": 4, "type": "CHAIN", "hp": 1 }
+  ],
+  "special_tiles": [],
+  "portals": [],
+  "conveyors": [],
+
+  "rewards": {
+    "coins_base": 85,
+    "coins_per_remaining_move": 12,
+    "star_thresholds": {
+      "1_star": 0,
+      "2_star": 6,
+      "3_star": 12
+    }
+  },
+
+  "metadata": {
+    "designer": "auto",
+    "notes": "Create bombs while clearing chains"
+  }
+}

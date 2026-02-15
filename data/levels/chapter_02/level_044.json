@@ -1,0 +1,62 @@
+﻿{
+  "level_id": 44,
+  "chapter": 2,
+  "room": 1,
+  "difficulty": "HARD",
+  "title": "Prism Break",
+
+  "board": {
+    "width": 7,
+    "height": 9,
+    "layout": [
+      [0,0,1,1,1,0,0],
+      [0,1,1,1,1,1,0],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [0,1,1,1,1,1,0],
+      [0,0,1,1,1,0,0]
+    ],
+    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST", "DIAMOND"]
+  },
+
+  "move_limit": 18,
+
+  "objectives": [
+    {
+      "type": "CREATE_POWERUP",
+      "params": { "powerup": "PRISM", "powerup_name": "Prisms", "count": 2 }
+    },
+    {
+      "type": "SCORE_TARGET",
+      "params": { "score": 3000 }
+    }
+  ],
+
+  "blockers": [
+    { "row": 3, "col": 2, "type": "CHAIN", "hp": 1 },
+    { "row": 3, "col": 4, "type": "CHAIN", "hp": 1 },
+    { "row": 5, "col": 2, "type": "CHAIN", "hp": 1 },
+    { "row": 5, "col": 4, "type": "CHAIN", "hp": 1 }
+  ],
+  "special_tiles": [],
+  "portals": [],
+  "conveyors": [],
+
+  "rewards": {
+    "coins_base": 95,
+    "coins_per_remaining_move": 15,
+    "star_thresholds": {
+      "1_star": 0,
+      "2_star": 5,
+      "3_star": 10
+    }
+  },
+
+  "metadata": {
+    "designer": "auto",
+    "notes": "Create 2 Prisms on diamond board with 6 colors"
+  }
+}

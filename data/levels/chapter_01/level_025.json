@@ -1,0 +1,71 @@
+﻿{
+  "level_id": 25,
+  "chapter": 1,
+  "room": 1,
+  "difficulty": "MEDIUM",
+  "title": "Blocker Medley",
+
+  "board": {
+    "width": 7,
+    "height": 9,
+    "layout": [
+      [0,1,1,1,1,1,0],
+      [0,1,1,1,1,1,0],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [0,1,1,1,1,1,0],
+      [0,1,1,1,1,1,0]
+    ],
+    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
+  },
+
+  "move_limit": 24,
+
+  "objectives": [
+    {
+      "type": "REMOVE_BLOCKER",
+      "params": { "blocker": "CRATE", "count": 3 }
+    },
+    {
+      "type": "REMOVE_BLOCKER",
+      "params": { "blocker": "ICE", "count": 3 }
+    },
+    {
+      "type": "REMOVE_BLOCKER",
+      "params": { "blocker": "CHAIN", "count": 3 }
+    }
+  ],
+
+  "blockers": [
+    { "row": 2, "col": 1, "type": "CRATE", "hp": 1 },
+    { "row": 4, "col": 3, "type": "CRATE", "hp": 1 },
+    { "row": 6, "col": 5, "type": "CRATE", "hp": 1 },
+    { "row": 2, "col": 3, "type": "ICE", "hp": 1 },
+    { "row": 4, "col": 5, "type": "ICE", "hp": 1 },
+    { "row": 6, "col": 1, "type": "ICE", "hp": 1 },
+    { "row": 3, "col": 2, "type": "CHAIN", "hp": 1 },
+    { "row": 5, "col": 4, "type": "CHAIN", "hp": 1 },
+    { "row": 7, "col": 3, "type": "CHAIN", "hp": 1 }
+  ],
+  "special_tiles": [],
+  "portals": [],
+  "conveyors": [],
+
+  "rewards": {
+    "coins_base": 80,
+    "coins_per_remaining_move": 10,
+    "star_thresholds": {
+      "1_star": 0,
+      "2_star": 7,
+      "3_star": 14
+    }
+  },
+
+  "metadata": {
+    "designer": "auto",
+    "notes": "All three blocker types mixed"
+  }
+}

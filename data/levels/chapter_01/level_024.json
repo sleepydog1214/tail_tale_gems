@@ -1,0 +1,61 @@
+﻿{
+  "level_id": 24,
+  "chapter": 1,
+  "room": 1,
+  "difficulty": "MEDIUM",
+  "title": "Prism Quest",
+
+  "board": {
+    "width": 7,
+    "height": 9,
+    "layout": [
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1]
+    ],
+    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST", "DIAMOND"]
+  },
+
+  "move_limit": 22,
+
+  "objectives": [
+    {
+      "type": "CREATE_POWERUP",
+      "params": { "powerup": "PRISM", "powerup_name": "Prisms", "count": 1 }
+    },
+    {
+      "type": "COLLECT_COLOR",
+      "params": { "color": "DIAMOND", "count": 10 }
+    },
+    {
+      "type": "SCORE_TARGET",
+      "params": { "score": 2000 }
+    }
+  ],
+
+  "blockers": [],
+  "special_tiles": [],
+  "portals": [],
+  "conveyors": [],
+
+  "rewards": {
+    "coins_base": 80,
+    "coins_per_remaining_move": 12,
+    "star_thresholds": {
+      "1_star": 0,
+      "2_star": 7,
+      "3_star": 14
+    }
+  },
+
+  "metadata": {
+    "designer": "auto",
+    "notes": "6 colors, create a Prism"
+  }
+}

@@ -1,0 +1,68 @@
+﻿{
+  "level_id": 35,
+  "chapter": 2,
+  "room": 1,
+  "difficulty": "MEDIUM",
+  "title": "Arm Wrestle",
+
+  "board": {
+    "width": 7,
+    "height": 9,
+    "layout": [
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1]
+    ],
+    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST", "DIAMOND"]
+  },
+
+  "move_limit": 24,
+
+  "objectives": [
+    {
+      "type": "REMOVE_BLOCKER",
+      "params": { "blocker": "REINFORCED_CRATE", "count": 6 }
+    },
+    {
+      "type": "REMOVE_BLOCKER",
+      "params": { "blocker": "ICE", "count": 4 }
+    }
+  ],
+
+  "blockers": [
+    { "row": 2, "col": 1, "type": "REINFORCED_CRATE", "hp": 2 },
+    { "row": 2, "col": 3, "type": "REINFORCED_CRATE", "hp": 2 },
+    { "row": 2, "col": 5, "type": "REINFORCED_CRATE", "hp": 2 },
+    { "row": 6, "col": 1, "type": "REINFORCED_CRATE", "hp": 2 },
+    { "row": 6, "col": 3, "type": "REINFORCED_CRATE", "hp": 2 },
+    { "row": 6, "col": 5, "type": "REINFORCED_CRATE", "hp": 2 },
+    { "row": 4, "col": 2, "type": "ICE", "hp": 1 },
+    { "row": 4, "col": 4, "type": "ICE", "hp": 1 },
+    { "row": 3, "col": 3, "type": "ICE", "hp": 1 },
+    { "row": 5, "col": 3, "type": "ICE", "hp": 1 }
+  ],
+  "special_tiles": [],
+  "portals": [],
+  "conveyors": [],
+
+  "rewards": {
+    "coins_base": 80,
+    "coins_per_remaining_move": 10,
+    "star_thresholds": {
+      "1_star": 0,
+      "2_star": 7,
+      "3_star": 14
+    }
+  },
+
+  "metadata": {
+    "designer": "auto",
+    "notes": "Reinforced crates + ICE with 6 colors"
+  }
+}

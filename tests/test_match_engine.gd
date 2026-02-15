@@ -70,6 +70,13 @@ func _ready() -> void:
 	_run("test_blocker_from_string", test_blocker_from_string)
 	_run("test_objective_from_string", test_objective_from_string)
 
+	# Game Readiness regression tests (Phase 3)
+	_run("test_particle_effects_class_available", test_particle_effects_class_available)
+	_run("test_board_view_script_loads", test_board_view_script_loads)
+	_run("test_game_screen_instantiates", test_game_screen_instantiates)
+	_run("test_board_initializes_with_gems", test_board_initializes_with_gems)
+	_run("test_hud_initializes_from_board", test_hud_initializes_from_board)
+
 	# Print summary
 	print("\n==============================================")
 	print("  Results: %d/%d passed, %d failed" % [_tests_passed, _tests_run, _tests_failed])
@@ -735,3 +742,79 @@ func test_objective_from_string() -> void:
 	_assert_eq(GemTypes.objective_from_string("COLLECT_COLOR"), GemTypes.ObjectiveType.COLLECT_COLOR, "COLLECT_COLOR")
 	_assert_eq(GemTypes.objective_from_string("REMOVE_BLOCKER"), GemTypes.ObjectiveType.REMOVE_BLOCKER, "REMOVE_BLOCKER")
 	_assert_eq(GemTypes.objective_from_string("CREATE_POWERUP"), GemTypes.ObjectiveType.CREATE_POWERUP, "CREATE_POWERUP")
+
+
+# ============================================================
+# GAME READINESS REGRESSION TESTS
+# ============================================================
+
+func test_particle_effects_class_available() -> void:
+	## Regression: ParticleEffects class_name must be registered globally.
+	var script: GDScript = load("res://scripts/board/particle_effects.gd") as GDScript
+	_assert_true(script != null, "particle_effects.gd loads")
+	_assert_true(script.can_instantiate(), "script can instantiate")
+
+
+func test_board_view_script_loads() -> void:
+	## Regression: board_view.gd must compile (depends on ParticleEffects).
+	var script: GDScript = load("res://scripts/board/board_view.gd") as GDScript
+	_assert_true(script != null, "board_view.gd compiles and loads")
+
+
+func test_game_screen_instantiates() -> void:
+	## Regression: game_screen.tscn must instantiate with all scripts attached.
+	var scene: PackedScene = load("res://scenes/screens/game_screen.tscn") as PackedScene
+	_assert_true(scene != null, "game_screen.tscn loads")
+	var instance: Node = scene.instantiate()
+	_assert_true(instance != null, "game_screen instantiates")
+
+	# Verify BoardView has its script (not a bare Node2D)
+	var board_view: Node = instance.get_node("BoardView")
+	_assert_true(board_view != null, "BoardView node exists")
+	_assert_true(board_view.has_method("initialize"), "BoardView has initialize method")
+
+	# Verify HUD has its script
+	var hud: Node = instance.get_node("UILayer/HUD")
+	_assert_true(hud != null, "HUD node exists")
+	_assert_true(hud.has_method("initialize"), "HUD has initialize method")
+
+	instance.free()
+
+
+func test_board_initializes_with_gems() -> void:
+	## Regression: board_view.initialize() must populate the board with gem nodes.
+	var board := LevelLoader.load_level(1)
+	_assert_true(board != null, "level 1 loads")
+
+	var script: GDScript = load("res://scripts/board/board_view.gd") as GDScript
+	var view: Node2D = Node2D.new()
+	view.set_script(script)
+	add_child(view)
+
+	view.initialize(board)
+	_assert_true(view.board_state != null, "board_state is set")
+	_assert_true(view.get_child_count() > 0, "gem nodes created")
+	_assert_gt(view.get_child_count(), 10, "many gem nodes on board")
+
+	view.queue_free()
+
+
+func test_hud_initializes_from_board() -> void:
+	## Regression: HUD must display correct values after initialize.
+	var board := LevelLoader.load_level(1)
+	_assert_true(board != null, "level 1 loads for HUD test")
+
+	# HUD requires @onready nodes, so instantiate from scene
+	var scene: PackedScene = load("res://scenes/screens/game_screen.tscn") as PackedScene
+	var instance: Node = scene.instantiate()
+	add_child(instance)
+
+	# HUD's _ready() runs when added to tree — now initialize
+	var hud: Node = instance.get_node("UILayer/HUD")
+	hud.initialize(board)
+
+	# Verify move label shows actual move limit (not default "25")
+	var move_label: Label = hud.get_node("MovePanel/MoveLabel") as Label
+	_assert_eq(move_label.text, str(board.move_limit), "moves show level move_limit")
+
+	instance.queue_free()

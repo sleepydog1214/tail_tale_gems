@@ -199,6 +199,7 @@ func _select(pos: Vector2i) -> void:
 		_gem_nodes[pos].set_selected(true)
 	_clear_hint()
 	_hint_timer = 0.0
+	AudioManager.play_sfx("select")
 
 
 func _deselect() -> void:
@@ -226,6 +227,7 @@ func _try_swap(from: Vector2i, to: Vector2i) -> void:
 			GemRenderer.get_board_position(to.x, to.y), SWAP_DURATION).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
 		tween.tween_property(to_node, "position",
 			GemRenderer.get_board_position(from.x, from.y), SWAP_DURATION).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+		AudioManager.play_sfx("gem_swap")
 		await tween.finished
 
 	# Now try the logical swap (match engine processes all cascades synchronously)
@@ -233,6 +235,7 @@ func _try_swap(from: Vector2i, to: Vector2i) -> void:
 
 	if not success:
 		# Swap failed — animate back
+		AudioManager.play_sfx("no_match")
 		if from_node and to_node:
 			var tween := create_tween().set_parallel(true)
 			tween.tween_property(from_node, "position",
@@ -263,6 +266,7 @@ func _show_hint() -> void:
 		_gem_nodes[from].is_hinted = true
 	if _gem_nodes.has(to):
 		_gem_nodes[to].is_hinted = true
+	AudioManager.play_sfx("hint_show")
 
 
 func _clear_hint() -> void:
@@ -321,13 +325,31 @@ func _animate_destroy(matched_positions: Array, cascade_depth: int) -> void:
 		tween.tween_property(node, "scale", Vector2.ZERO, DESTROY_DURATION).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_BACK)
 		tween.tween_property(node, "modulate", Color(1, 1, 1, 0), DESTROY_DURATION)
 
+		# Spawn particle burst at each destroyed gem
+		var world_pos: Vector2 = GemRenderer.get_board_position(pos.x, pos.y) + position
+		var cell := board_state.get_cell(pos.x, pos.y)
+		var gem_color: Color = Color.WHITE
+		if cell != null and cell.has_gem():
+			gem_color = GemTypes.COLOR_HEX.get(cell.gem_color, Color.WHITE)
+		ParticleEffects.spawn_gem_burst(get_tree().root, world_pos, gem_color)
+
 	if any_animated:
+		# Play match SFX
+		if cascade_depth <= 1:
+			AudioManager.play_sfx("gem_match")
+		else:
+			AudioManager.play_sfx("cascade")
 		await tween.finished
 
 		# Spawn score popup at center of matched area
 		if cascade_depth >= 1:
 			var center := _get_center_of_positions(matched_positions)
 			_spawn_score_popup(center, matched_positions.size() * 10, cascade_depth)
+
+		# Cascade sparkles for combo chains
+		if cascade_depth >= 2:
+			var center := _get_center_of_positions(matched_positions)
+			ParticleEffects.spawn_cascade_sparkle(get_tree().root, center + position, cascade_depth)
 
 	# Remove destroyed gem nodes
 	for pos in matched_positions:
@@ -366,6 +388,7 @@ func _animate_falls(movements: Array) -> void:
 
 	if any_animated:
 		await tween.finished
+		AudioManager.play_sfx("gem_land")
 
 
 func _animate_spawns(spawns: Array) -> void:

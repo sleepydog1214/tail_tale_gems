@@ -1,0 +1,60 @@
+﻿{
+  "level_id": 31,
+  "chapter": 2,
+  "room": 1,
+  "difficulty": "MEDIUM",
+  "title": "New Horizons",
+
+  "board": {
+    "width": 7,
+    "height": 9,
+    "layout": [
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1]
+    ],
+    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
+  },
+
+  "move_limit": 28,
+
+  "objectives": [
+    {
+      "type": "COLLECT_COLOR",
+      "params": { "color": "RUBY", "count": 25 }
+    },
+    {
+      "type": "SCORE_TARGET",
+      "params": { "score": 1500 }
+    }
+  ],
+
+  "blockers": [
+    { "row": 4, "col": 0, "type": "STONE", "hp": 0 },
+    { "row": 4, "col": 6, "type": "STONE", "hp": 0 }
+  ],
+  "special_tiles": [],
+  "portals": [],
+  "conveyors": [],
+
+  "rewards": {
+    "coins_base": 75,
+    "coins_per_remaining_move": 10,
+    "star_thresholds": {
+      "1_star": 0,
+      "2_star": 9,
+      "3_star": 18
+    }
+  },
+
+  "metadata": {
+    "designer": "auto",
+    "notes": "Chapter 2 opener with side stones"
+  }
+}

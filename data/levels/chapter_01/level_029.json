@@ -1,0 +1,68 @@
+﻿{
+  "level_id": 29,
+  "chapter": 1,
+  "room": 1,
+  "difficulty": "HARD",
+  "title": "The Labyrinth",
+
+  "board": {
+    "width": 7,
+    "height": 9,
+    "layout": [
+      [1,0,1,1,1,0,1],
+      [1,1,1,0,1,1,1],
+      [1,1,1,1,1,1,1],
+      [0,1,1,1,1,1,0],
+      [1,1,1,1,1,1,1],
+      [0,1,1,1,1,1,0],
+      [1,1,1,1,1,1,1],
+      [1,1,1,0,1,1,1],
+      [1,0,1,1,1,0,1]
+    ],
+    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
+  },
+
+  "move_limit": 22,
+
+  "objectives": [
+    {
+      "type": "REMOVE_BLOCKER",
+      "params": { "blocker": "ICE", "count": 4 }
+    },
+    {
+      "type": "REMOVE_BLOCKER",
+      "params": { "blocker": "VASE", "count": 2 }
+    },
+    {
+      "type": "SCORE_TARGET",
+      "params": { "score": 2500 }
+    }
+  ],
+
+  "blockers": [
+    { "row": 2, "col": 1, "type": "ICE", "hp": 1 },
+    { "row": 2, "col": 5, "type": "ICE", "hp": 1 },
+    { "row": 6, "col": 1, "type": "ICE", "hp": 1 },
+    { "row": 6, "col": 5, "type": "ICE", "hp": 1 },
+    { "row": 4, "col": 2, "type": "VASE", "hp": 3 },
+    { "row": 4, "col": 4, "type": "VASE", "hp": 3 }
+  ],
+  "special_tiles": [],
+  "portals": [],
+  "conveyors": [],
+
+  "rewards": {
+    "coins_base": 90,
+    "coins_per_remaining_move": 12,
+    "star_thresholds": {
+      "1_star": 0,
+      "2_star": 6,
+      "3_star": 12
+    }
+  },
+
+  "metadata": {
+    "designer": "auto",
+    "notes": "Complex board shape with mixed blockers"
+  }
+}

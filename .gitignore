@@ -63,3 +63,4 @@ game_stderr.txt
 
 # Logs
 *.log
+diag_*.txt
