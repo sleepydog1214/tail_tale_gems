@@ -1,51 +1,116 @@
-{
-  "level_id": 1,
-  "chapter": 1,
-  "room": 1,
-  "difficulty": "TUTORIAL",
-  "title": "Welcome to the Kingdom",
+﻿{
+    "level_id":  1,
+    "chapter":  1,
+    "room":  1,
+    "difficulty":  "TUTORIAL",
+    "title":  "Welcome to the Kingdom",
+    "board":  {
+                  "width":  7,
+                  "height":  7,
+                  "layout":  [
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD"
+                               ]
+              },
+    "move_limit":  60,
+    "objectives":  [
+                       {
+                           "type":  "COLLECT_COLOR",
+                           "params":  {
+                                          "color":  "RUBY",
+                                          "count":  12
+                                      }
+                       }
+                   ],
+    "blockers":  [
 
-  "board": {
-    "width": 7,
-    "height": 7,
-    "layout": [
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD"]
-  },
+                 ],
+    "special_tiles":  [
 
-  "move_limit": 40,
+                      ],
+    "portals":  [
 
-  "objectives": [
-    {
-      "type": "COLLECT_COLOR",
-      "params": { "color": "RUBY", "count": 15 }
-    }
-  ],
+                ],
+    "conveyors":  [
 
-  "blockers": [],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 50,
-    "coins_per_remaining_move": 5,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 13,
-      "3_star": 26
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Tutorial level 1: basic matching introduction. Only 3 colors for simplicity."
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  50,
+                    "coins_per_remaining_move":  5,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  15,
+                                            "3_star":  30
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Tutorial level 1: basic matching introduction. Only 3 colors for simplicity."
+                 }
 }

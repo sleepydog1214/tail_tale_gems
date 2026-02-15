@@ -1,64 +1,177 @@
 ﻿{
-  "level_id": 26,
-  "chapter": 1,
-  "room": 1,
-  "difficulty": "HARD",
-  "title": "Stone Garden",
+    "level_id":  26,
+    "chapter":  1,
+    "room":  1,
+    "difficulty":  "HARD",
+    "title":  "Stone Garden",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST"
+                               ]
+              },
+    "move_limit":  35,
+    "objectives":  [
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "STONE",
+                                          "count":  5
+                                      }
+                       },
+                       {
+                           "type":  "SCORE_TARGET",
+                           "params":  {
+                                          "score":  1600
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  1,
+                         "col":  1,
+                         "type":  "STONE",
+                         "hp":  0
+                     },
+                     {
+                         "row":  1,
+                         "col":  5,
+                         "type":  "STONE",
+                         "hp":  0
+                     },
+                     {
+                         "row":  4,
+                         "col":  0,
+                         "type":  "STONE",
+                         "hp":  0
+                     },
+                     {
+                         "row":  4,
+                         "col":  6,
+                         "type":  "STONE",
+                         "hp":  0
+                     },
+                     {
+                         "row":  7,
+                         "col":  1,
+                         "type":  "STONE",
+                         "hp":  0
+                     },
+                     {
+                         "row":  7,
+                         "col":  5,
+                         "type":  "STONE",
+                         "hp":  0
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 25,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "STONE", "count": 6 }
-    },
-    {
-      "type": "SCORE_TARGET",
-      "params": { "score": 2000 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 1, "col": 1, "type": "STONE", "hp": 0 },
-    { "row": 1, "col": 5, "type": "STONE", "hp": 0 },
-    { "row": 4, "col": 0, "type": "STONE", "hp": 0 },
-    { "row": 4, "col": 6, "type": "STONE", "hp": 0 },
-    { "row": 7, "col": 1, "type": "STONE", "hp": 0 },
-    { "row": 7, "col": 5, "type": "STONE", "hp": 0 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 85,
-    "coins_per_remaining_move": 12,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 8,
-      "3_star": 16
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Introduces STONE (indestructible obstacles)"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  85,
+                    "coins_per_remaining_move":  12,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  8,
+                                            "3_star":  17
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Introduces STONE (indestructible obstacles)"
+                 }
 }

@@ -1,66 +1,189 @@
 ﻿{
-  "level_id": 34,
-  "chapter": 2,
-  "room": 1,
-  "difficulty": "MEDIUM",
-  "title": "Chain Gang",
+    "level_id":  34,
+    "chapter":  2,
+    "room":  1,
+    "difficulty":  "MEDIUM",
+    "title":  "Chain Gang",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     0
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     0
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST"
+                               ]
+              },
+    "move_limit":  35,
+    "objectives":  [
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "CHAIN",
+                                          "count":  7
+                                      }
+                       },
+                       {
+                           "type":  "SCORE_TARGET",
+                           "params":  {
+                                          "score":  1500
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  2,
+                         "col":  1,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  2,
+                         "col":  3,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  2,
+                         "col":  5,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  4,
+                         "col":  2,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  4,
+                         "col":  4,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  6,
+                         "col":  1,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  6,
+                         "col":  3,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  6,
+                         "col":  5,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [0,1,1,1,1,1,0],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [0,1,1,1,1,1,0]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 24,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "CHAIN", "count": 8 }
-    },
-    {
-      "type": "SCORE_TARGET",
-      "params": { "score": 1800 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 2, "col": 1, "type": "CHAIN", "hp": 1 },
-    { "row": 2, "col": 3, "type": "CHAIN", "hp": 1 },
-    { "row": 2, "col": 5, "type": "CHAIN", "hp": 1 },
-    { "row": 4, "col": 2, "type": "CHAIN", "hp": 1 },
-    { "row": 4, "col": 4, "type": "CHAIN", "hp": 1 },
-    { "row": 6, "col": 1, "type": "CHAIN", "hp": 1 },
-    { "row": 6, "col": 3, "type": "CHAIN", "hp": 1 },
-    { "row": 6, "col": 5, "type": "CHAIN", "hp": 1 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 80,
-    "coins_per_remaining_move": 10,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 7,
-      "3_star": 14
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Many chains to break"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  80,
+                    "coins_per_remaining_move":  10,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  8,
+                                            "3_star":  17
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Many chains to break"
+                 }
 }

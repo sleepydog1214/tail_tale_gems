@@ -1,72 +1,208 @@
 ﻿{
-  "level_id": 20,
-  "chapter": 1,
-  "room": 1,
-  "difficulty": "MEDIUM",
-  "title": "Crosshatch",
+    "level_id":  20,
+    "chapter":  1,
+    "room":  1,
+    "difficulty":  "MEDIUM",
+    "title":  "Crosshatch",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     0,
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     0,
+                                     0
+                                 ],
+                                 [
+                                     0,
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     0,
+                                     0
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     0,
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     0,
+                                     0
+                                 ],
+                                 [
+                                     0,
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     0,
+                                     0
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST"
+                               ]
+              },
+    "move_limit":  35,
+    "objectives":  [
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "ICE",
+                                          "count":  5
+                                      }
+                       },
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "CHAIN",
+                                          "count":  4
+                                      }
+                       },
+                       {
+                           "type":  "SCORE_TARGET",
+                           "params":  {
+                                          "score":  1200
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  2,
+                         "col":  2,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  2,
+                         "col":  4,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  4,
+                         "col":  1,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  4,
+                         "col":  5,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  6,
+                         "col":  2,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  6,
+                         "col":  4,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  3,
+                         "col":  3,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  4,
+                         "col":  3,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  5,
+                         "col":  2,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  5,
+                         "col":  4,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [0,0,1,1,1,0,0],
-      [0,0,1,1,1,0,0],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [0,0,1,1,1,0,0],
-      [0,0,1,1,1,0,0]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 25,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "ICE", "count": 6 }
-    },
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "CHAIN", "count": 4 }
-    },
-    {
-      "type": "SCORE_TARGET",
-      "params": { "score": 1500 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 2, "col": 2, "type": "ICE", "hp": 1 },
-    { "row": 2, "col": 4, "type": "ICE", "hp": 1 },
-    { "row": 4, "col": 1, "type": "ICE", "hp": 1 },
-    { "row": 4, "col": 5, "type": "ICE", "hp": 1 },
-    { "row": 6, "col": 2, "type": "ICE", "hp": 1 },
-    { "row": 6, "col": 4, "type": "ICE", "hp": 1 },
-    { "row": 3, "col": 3, "type": "CHAIN", "hp": 1 },
-    { "row": 4, "col": 3, "type": "CHAIN", "hp": 1 },
-    { "row": 5, "col": 2, "type": "CHAIN", "hp": 1 },
-    { "row": 5, "col": 4, "type": "CHAIN", "hp": 1 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 75,
-    "coins_per_remaining_move": 10,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 8,
-      "3_star": 16
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Cross-shaped board with ICE + CHAIN"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  75,
+                    "coins_per_remaining_move":  10,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  8,
+                                            "3_star":  17
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Cross-shaped board with ICE + CHAIN"
+                 }
 }

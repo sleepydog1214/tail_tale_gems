@@ -25,8 +25,8 @@ var _hinted_pos: Vector2i = Vector2i(-1, -1)
 
 # Background grid
 var _board_offset: Vector2 = Vector2.ZERO
-var _board_bg_color_a := Color(0.14, 0.18, 0.30, 0.95)
-var _board_bg_color_b := Color(0.12, 0.15, 0.26, 0.95)
+var _board_bg_color_a := Color(0.95, 0.85, 0.90, 0.95)
+var _board_bg_color_b := Color(0.90, 0.80, 0.88, 0.95)
 
 
 func _ready() -> void:
@@ -103,7 +103,7 @@ func _draw() -> void:
 	var total_w := board_state.width * CELL_SIZE
 	var total_h := board_state.height * CELL_SIZE
 	var frame_rect := Rect2(-4, -4, total_w + 8, total_h + 8)
-	draw_rect(frame_rect, Color(0.08, 0.10, 0.18, 0.6), true)
+	draw_rect(frame_rect, Color(0.85, 0.72, 0.80, 0.6), true)
 
 	for r in range(board_state.height):
 		for c in range(board_state.width):
@@ -126,7 +126,7 @@ func _draw() -> void:
 				base_color = _board_bg_color_b
 
 			draw_rect(rect, base_color)
-			draw_rect(rect, Color(0.22, 0.28, 0.42, 0.4), false, 1.0)
+			draw_rect(rect, Color(0.80, 0.70, 0.78, 0.4), false, 1.0)
 
 
 # ============================================================
@@ -429,7 +429,7 @@ func _spawn_score_popup(board_pos: Vector2, points: int, cascade: int) -> void:
 	else:
 		label.text = "+%d" % points
 	label.add_theme_font_size_override("font_size", 16 + cascade * 2)
-	label.add_theme_color_override("font_color", Color("f1c40f") if cascade <= 1 else Color("e67e22"))
+	label.add_theme_color_override("font_color", Color("e84393") if cascade <= 1 else Color("fd79a8"))
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label.position = board_pos - Vector2(30, 10)
 	label.z_index = 100

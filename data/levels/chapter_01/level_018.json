@@ -1,68 +1,202 @@
 ﻿{
-  "level_id": 18,
-  "chapter": 1,
-  "room": 1,
-  "difficulty": "MEDIUM",
-  "title": "Locked Treasure",
+    "level_id":  18,
+    "chapter":  1,
+    "room":  1,
+    "difficulty":  "MEDIUM",
+    "title":  "Locked Treasure",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     0
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     0
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST"
+                               ]
+              },
+    "move_limit":  40,
+    "objectives":  [
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "CHAIN",
+                                          "count":  5
+                                      }
+                       },
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "CRATE",
+                                          "count":  4
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  1,
+                         "col":  2,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  1,
+                         "col":  4,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  4,
+                         "col":  1,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  4,
+                         "col":  5,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  7,
+                         "col":  2,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  7,
+                         "col":  4,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  3,
+                         "col":  3,
+                         "type":  "CRATE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  5,
+                         "col":  3,
+                         "type":  "CRATE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  4,
+                         "col":  2,
+                         "type":  "CRATE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  4,
+                         "col":  4,
+                         "type":  "CRATE",
+                         "hp":  1
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [0,1,1,1,1,1,0],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [0,1,1,1,1,1,0]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 26,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "CHAIN", "count": 6 }
-    },
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "CRATE", "count": 4 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 1, "col": 2, "type": "CHAIN", "hp": 1 },
-    { "row": 1, "col": 4, "type": "CHAIN", "hp": 1 },
-    { "row": 4, "col": 1, "type": "CHAIN", "hp": 1 },
-    { "row": 4, "col": 5, "type": "CHAIN", "hp": 1 },
-    { "row": 7, "col": 2, "type": "CHAIN", "hp": 1 },
-    { "row": 7, "col": 4, "type": "CHAIN", "hp": 1 },
-    { "row": 3, "col": 3, "type": "CRATE", "hp": 1 },
-    { "row": 5, "col": 3, "type": "CRATE", "hp": 1 },
-    { "row": 4, "col": 2, "type": "CRATE", "hp": 1 },
-    { "row": 4, "col": 4, "type": "CRATE", "hp": 1 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 75,
-    "coins_per_remaining_move": 10,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 8,
-      "3_star": 16
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Mixed CHAIN + CRATE"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  75,
+                    "coins_per_remaining_move":  10,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  10,
+                                            "3_star":  20
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Mixed CHAIN + CRATE"
+                 }
 }

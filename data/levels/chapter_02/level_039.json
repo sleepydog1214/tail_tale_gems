@@ -1,70 +1,197 @@
 ﻿{
-  "level_id": 39,
-  "chapter": 2,
-  "room": 1,
-  "difficulty": "HARD",
-  "title": "The Crucible",
+    "level_id":  39,
+    "chapter":  2,
+    "room":  1,
+    "difficulty":  "HARD",
+    "title":  "The Crucible",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     0,
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     0,
+                                     0
+                                 ],
+                                 [
+                                     0,
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     0,
+                                     0
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     0,
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     0,
+                                     0
+                                 ],
+                                 [
+                                     0,
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     0,
+                                     0
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST",
+                                   "DIAMOND"
+                               ]
+              },
+    "move_limit":  30,
+    "objectives":  [
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "VASE",
+                                          "count":  4
+                                      }
+                       },
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "REINFORCED_CRATE",
+                                          "count":  4
+                                      }
+                       },
+                       {
+                           "type":  "SCORE_TARGET",
+                           "params":  {
+                                          "score":  2000
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  3,
+                         "col":  2,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  3,
+                         "col":  4,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  5,
+                         "col":  2,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  5,
+                         "col":  4,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  2,
+                         "col":  3,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     },
+                     {
+                         "row":  4,
+                         "col":  1,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     },
+                     {
+                         "row":  4,
+                         "col":  5,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     },
+                     {
+                         "row":  6,
+                         "col":  3,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [0,0,1,1,1,0,0],
-      [0,0,1,1,1,0,0],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [0,0,1,1,1,0,0],
-      [0,0,1,1,1,0,0]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST", "DIAMOND"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 20,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "VASE", "count": 4 }
-    },
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "REINFORCED_CRATE", "count": 4 }
-    },
-    {
-      "type": "SCORE_TARGET",
-      "params": { "score": 2500 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 3, "col": 2, "type": "VASE", "hp": 3 },
-    { "row": 3, "col": 4, "type": "VASE", "hp": 3 },
-    { "row": 5, "col": 2, "type": "VASE", "hp": 3 },
-    { "row": 5, "col": 4, "type": "VASE", "hp": 3 },
-    { "row": 2, "col": 3, "type": "REINFORCED_CRATE", "hp": 2 },
-    { "row": 4, "col": 1, "type": "REINFORCED_CRATE", "hp": 2 },
-    { "row": 4, "col": 5, "type": "REINFORCED_CRATE", "hp": 2 },
-    { "row": 6, "col": 3, "type": "REINFORCED_CRATE", "hp": 2 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 90,
-    "coins_per_remaining_move": 12,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 6,
-      "3_star": 12
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Crucible-shaped board with heavy blockers"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  90,
+                    "coins_per_remaining_move":  12,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  7,
+                                            "3_star":  15
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Crucible-shaped board with heavy blockers"
+                 }
 }

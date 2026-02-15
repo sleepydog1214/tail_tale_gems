@@ -1,12 +1,16 @@
 extends Node
 ## Manages save/load of player progress to local storage.
 ## Phase 3: Persistent player data with auto-save.
+## Phase 4: Player profiles (name + avatar).
 
 const SAVE_PATH := "user://save_data.json"
-const SAVE_VERSION := 1
+const SAVE_VERSION := 2
+
+const AVATAR_OPTIONS := ["🐱", "🐈", "😺", "😸", "🐾", "🌸", "💖", "✨"]
 
 signal data_loaded
 signal data_saved
+signal profile_updated
 
 var data: Dictionary = {}
 var _dirty: bool = false
@@ -27,6 +31,51 @@ func _notification(what: int) -> void:
 
 func get_progress() -> Dictionary:
 	return data.get("progress", {})
+
+
+# --- Profile ---
+
+func get_profile() -> Dictionary:
+	return data.get("profile", {"name": "", "avatar_index": 0})
+
+
+func has_profile() -> bool:
+	var profile: Dictionary = get_profile()
+	return profile.get("name", "") != ""
+
+
+func get_profile_name() -> String:
+	return str(get_profile().get("name", ""))
+
+
+func get_profile_avatar() -> String:
+	var idx: int = int(get_profile().get("avatar_index", 0))
+	if idx >= 0 and idx < AVATAR_OPTIONS.size():
+		return AVATAR_OPTIONS[idx]
+	return AVATAR_OPTIONS[0]
+
+
+func get_profile_avatar_index() -> int:
+	return int(get_profile().get("avatar_index", 0))
+
+
+func set_profile_name(player_name: String) -> void:
+	_ensure_profile()
+	data["profile"]["name"] = player_name.strip_edges().left(20)
+	_mark_dirty()
+	profile_updated.emit()
+
+
+func set_profile_avatar(idx: int) -> void:
+	_ensure_profile()
+	data["profile"]["avatar_index"] = clampi(idx, 0, AVATAR_OPTIONS.size() - 1)
+	_mark_dirty()
+	profile_updated.emit()
+
+
+func _ensure_profile() -> void:
+	if not data.has("profile"):
+		data["profile"] = {"name": "", "avatar_index": 0}
 
 
 func get_level_stars(level_id: int) -> int:
@@ -320,6 +369,10 @@ func _create_default_data() -> Dictionary:
 	return {
 		"version": SAVE_VERSION,
 		"created_at": Time.get_datetime_string_from_system(),
+		"profile": {
+			"name": "",
+			"avatar_index": 0,
+		},
 		"progress": {
 			"current_level": 1,
 			"levels": {},

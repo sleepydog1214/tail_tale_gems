@@ -1,68 +1,202 @@
 ﻿{
-  "level_id": 33,
-  "chapter": 2,
-  "room": 1,
-  "difficulty": "MEDIUM",
-  "title": "Deep Freeze",
+    "level_id":  33,
+    "chapter":  2,
+    "room":  1,
+    "difficulty":  "MEDIUM",
+    "title":  "Deep Freeze",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST"
+                               ]
+              },
+    "move_limit":  35,
+    "objectives":  [
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "ICE",
+                                          "count":  8
+                                      }
+                       },
+                       {
+                           "type":  "COLLECT_COLOR",
+                           "params":  {
+                                          "color":  "SAPPHIRE",
+                                          "count":  12
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  1,
+                         "col":  1,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  1,
+                         "col":  3,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  1,
+                         "col":  5,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  3,
+                         "col":  2,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  3,
+                         "col":  4,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  5,
+                         "col":  2,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  5,
+                         "col":  4,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  7,
+                         "col":  1,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  7,
+                         "col":  3,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  7,
+                         "col":  5,
+                         "type":  "ICE",
+                         "hp":  1
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 25,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "ICE", "count": 10 }
-    },
-    {
-      "type": "COLLECT_COLOR",
-      "params": { "color": "SAPPHIRE", "count": 15 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 1, "col": 1, "type": "ICE", "hp": 1 },
-    { "row": 1, "col": 3, "type": "ICE", "hp": 1 },
-    { "row": 1, "col": 5, "type": "ICE", "hp": 1 },
-    { "row": 3, "col": 2, "type": "ICE", "hp": 1 },
-    { "row": 3, "col": 4, "type": "ICE", "hp": 1 },
-    { "row": 5, "col": 2, "type": "ICE", "hp": 1 },
-    { "row": 5, "col": 4, "type": "ICE", "hp": 1 },
-    { "row": 7, "col": 1, "type": "ICE", "hp": 1 },
-    { "row": 7, "col": 3, "type": "ICE", "hp": 1 },
-    { "row": 7, "col": 5, "type": "ICE", "hp": 1 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 75,
-    "coins_per_remaining_move": 10,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 8,
-      "3_star": 16
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Lots of ICE to clear"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  75,
+                    "coins_per_remaining_move":  10,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  8,
+                                            "3_star":  17
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Lots of ICE to clear"
+                 }
 }

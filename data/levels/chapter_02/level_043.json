@@ -1,71 +1,203 @@
 ﻿{
-  "level_id": 43,
-  "chapter": 2,
-  "room": 1,
-  "difficulty": "HARD",
-  "title": "Triple Threat",
+    "level_id":  43,
+    "chapter":  2,
+    "room":  1,
+    "difficulty":  "HARD",
+    "title":  "Triple Threat",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST"
+                               ]
+              },
+    "move_limit":  30,
+    "objectives":  [
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "VASE",
+                                          "count":  3
+                                      }
+                       },
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "REINFORCED_CRATE",
+                                          "count":  3
+                                      }
+                       },
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "CHAIN",
+                                          "count":  3
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  2,
+                         "col":  1,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  4,
+                         "col":  3,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  6,
+                         "col":  5,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  2,
+                         "col":  3,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     },
+                     {
+                         "row":  4,
+                         "col":  5,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     },
+                     {
+                         "row":  6,
+                         "col":  1,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     },
+                     {
+                         "row":  2,
+                         "col":  5,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  4,
+                         "col":  1,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  6,
+                         "col":  3,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 20,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "VASE", "count": 3 }
-    },
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "REINFORCED_CRATE", "count": 3 }
-    },
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "CHAIN", "count": 3 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 2, "col": 1, "type": "VASE", "hp": 3 },
-    { "row": 4, "col": 3, "type": "VASE", "hp": 3 },
-    { "row": 6, "col": 5, "type": "VASE", "hp": 3 },
-    { "row": 2, "col": 3, "type": "REINFORCED_CRATE", "hp": 2 },
-    { "row": 4, "col": 5, "type": "REINFORCED_CRATE", "hp": 2 },
-    { "row": 6, "col": 1, "type": "REINFORCED_CRATE", "hp": 2 },
-    { "row": 2, "col": 5, "type": "CHAIN", "hp": 1 },
-    { "row": 4, "col": 1, "type": "CHAIN", "hp": 1 },
-    { "row": 6, "col": 3, "type": "CHAIN", "hp": 1 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 90,
-    "coins_per_remaining_move": 12,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 5,
-      "3_star": 10
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Three different blocker types to clear"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  90,
+                    "coins_per_remaining_move":  12,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  7,
+                                            "3_star":  15
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Three different blocker types to clear"
+                 }
 }

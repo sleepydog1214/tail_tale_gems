@@ -1,57 +1,142 @@
 ﻿{
-  "level_id": 14,
-  "chapter": 1,
-  "room": 1,
-  "difficulty": "EASY",
-  "title": "Gem Garden",
+    "level_id":  14,
+    "chapter":  1,
+    "room":  1,
+    "difficulty":  "EASY",
+    "title":  "Gem Garden",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST"
+                               ]
+              },
+    "move_limit":  40,
+    "objectives":  [
+                       {
+                           "type":  "COLLECT_COLOR",
+                           "params":  {
+                                          "color":  "AMETHYST",
+                                          "count":  12
+                                      }
+                       },
+                       {
+                           "type":  "SCORE_TARGET",
+                           "params":  {
+                                          "score":  1200
+                                      }
+                       }
+                   ],
+    "blockers":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
-  },
+                 ],
+    "special_tiles":  [
 
-  "move_limit": 28,
+                      ],
+    "portals":  [
 
-  "objectives": [
-    {
-      "type": "COLLECT_COLOR",
-      "params": { "color": "AMETHYST", "count": 15 }
-    },
-    {
-      "type": "SCORE_TARGET",
-      "params": { "score": 1500 }
-    }
-  ],
+                ],
+    "conveyors":  [
 
-  "blockers": [],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 70,
-    "coins_per_remaining_move": 8,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 9,
-      "3_star": 18
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "5 colors introduced"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  70,
+                    "coins_per_remaining_move":  8,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  10,
+                                            "3_star":  20
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "5 colors introduced"
+                 }
 }

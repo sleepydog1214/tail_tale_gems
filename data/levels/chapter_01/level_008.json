@@ -1,53 +1,134 @@
-{
-  "level_id": 8,
-  "chapter": 1,
-  "room": 1,
-  "difficulty": "EASY",
-  "title": "Score Rush",
+﻿{
+    "level_id":  8,
+    "chapter":  1,
+    "room":  1,
+    "difficulty":  "EASY",
+    "title":  "Score Rush",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ"
+                               ]
+              },
+    "move_limit":  45,
+    "objectives":  [
+                       {
+                           "type":  "SCORE_TARGET",
+                           "params":  {
+                                          "score":  1200
+                                      }
+                       }
+                   ],
+    "blockers":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ"]
-  },
+                 ],
+    "special_tiles":  [
 
-  "move_limit": 30,
+                      ],
+    "portals":  [
 
-  "objectives": [
-    {
-      "type": "SCORE_TARGET",
-      "params": { "score": 1500 }
-    }
-  ],
+                ],
+    "conveyors":  [
 
-  "blockers": [],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 60,
-    "coins_per_remaining_move": 8,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 10,
-      "3_star": 20
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Easy level 3: introduces score target objective. Encourages combos and cascades."
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  60,
+                    "coins_per_remaining_move":  8,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  11,
+                                            "3_star":  22
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Easy level 3: introduces score target objective. Encourages combos and cascades."
+                 }
 }

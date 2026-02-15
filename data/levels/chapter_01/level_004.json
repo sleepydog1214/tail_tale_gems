@@ -1,52 +1,127 @@
-{
-  "level_id": 4,
-  "chapter": 1,
-  "room": 1,
-  "difficulty": "TUTORIAL",
-  "title": "Rocket Power",
+﻿{
+    "level_id":  4,
+    "chapter":  1,
+    "room":  1,
+    "difficulty":  "TUTORIAL",
+    "title":  "Rocket Power",
+    "board":  {
+                  "width":  7,
+                  "height":  8,
+                  "layout":  [
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ"
+                               ]
+              },
+    "move_limit":  45,
+    "objectives":  [
+                       {
+                           "type":  "CREATE_POWERUP",
+                           "params":  {
+                                          "powerup":  "ROCKET",
+                                          "powerup_name":  "Rockets",
+                                          "count":  2
+                                      }
+                       }
+                   ],
+    "blockers":  [
 
-  "board": {
-    "width": 7,
-    "height": 8,
-    "layout": [
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ"]
-  },
+                 ],
+    "special_tiles":  [
 
-  "move_limit": 30,
+                      ],
+    "portals":  [
 
-  "objectives": [
-    {
-      "type": "CREATE_POWERUP",
-      "params": { "powerup": "ROCKET", "powerup_name": "Rockets", "count": 2 }
-    }
-  ],
+                ],
+    "conveyors":  [
 
-  "blockers": [],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 50,
-    "coins_per_remaining_move": 5,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 10,
-      "3_star": 20
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Tutorial level 4: teaches match-4 to create Rockets. Objective is to create 2 rockets."
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  50,
+                    "coins_per_remaining_move":  5,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  11,
+                                            "3_star":  22
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Tutorial level 4: teaches match-4 to create Rockets. Objective is to create 2 rockets."
+                 }
 }

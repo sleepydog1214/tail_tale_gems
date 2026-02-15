@@ -496,8 +496,9 @@ func _process_matches(matches: Array) -> Array:
 
 func _calculate_match_score(gems_cleared: int, cascade: int) -> int:
 	## Score formula: base per gem × cascade multiplier.
-	var base := gems_cleared * 10
-	var cascade_bonus := cascade * 5
+	## Generous scoring — cascades feel rewarding.
+	var base := gems_cleared * 15
+	var cascade_bonus := cascade * 15
 	return base + (base * cascade_bonus / 100)
 
 

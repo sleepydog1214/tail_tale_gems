@@ -1,74 +1,220 @@
 ﻿{
-  "level_id": 40,
-  "chapter": 2,
-  "room": 1,
-  "difficulty": "HARD",
-  "title": "Frozen Fortress",
+    "level_id":  40,
+    "chapter":  2,
+    "room":  1,
+    "difficulty":  "HARD",
+    "title":  "Frozen Fortress",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     0
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     0
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST"
+                               ]
+              },
+    "move_limit":  35,
+    "objectives":  [
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "ICE",
+                                          "count":  7
+                                      }
+                       },
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "VASE",
+                                          "count":  4
+                                      }
+                       },
+                       {
+                           "type":  "SCORE_TARGET",
+                           "params":  {
+                                          "score":  1600
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  1,
+                         "col":  2,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  1,
+                         "col":  4,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  3,
+                         "col":  1,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  3,
+                         "col":  5,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  5,
+                         "col":  1,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  5,
+                         "col":  5,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  7,
+                         "col":  2,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  7,
+                         "col":  4,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  4,
+                         "col":  2,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  4,
+                         "col":  4,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  2,
+                         "col":  3,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  6,
+                         "col":  3,
+                         "type":  "VASE",
+                         "hp":  3
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [0,1,1,1,1,1,0],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [0,1,1,1,1,1,0]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 22,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "ICE", "count": 8 }
-    },
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "VASE", "count": 4 }
-    },
-    {
-      "type": "SCORE_TARGET",
-      "params": { "score": 2000 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 1, "col": 2, "type": "ICE", "hp": 1 },
-    { "row": 1, "col": 4, "type": "ICE", "hp": 1 },
-    { "row": 3, "col": 1, "type": "ICE", "hp": 1 },
-    { "row": 3, "col": 5, "type": "ICE", "hp": 1 },
-    { "row": 5, "col": 1, "type": "ICE", "hp": 1 },
-    { "row": 5, "col": 5, "type": "ICE", "hp": 1 },
-    { "row": 7, "col": 2, "type": "ICE", "hp": 1 },
-    { "row": 7, "col": 4, "type": "ICE", "hp": 1 },
-    { "row": 4, "col": 2, "type": "VASE", "hp": 3 },
-    { "row": 4, "col": 4, "type": "VASE", "hp": 3 },
-    { "row": 2, "col": 3, "type": "VASE", "hp": 3 },
-    { "row": 6, "col": 3, "type": "VASE", "hp": 3 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 90,
-    "coins_per_remaining_move": 12,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 6,
-      "3_star": 12
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "ICE + VASE on shaped board"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  90,
+                    "coins_per_remaining_move":  12,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  8,
+                                            "3_star":  17
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "ICE + VASE on shaped board"
+                 }
 }

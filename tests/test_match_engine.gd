@@ -77,6 +77,13 @@ func _ready() -> void:
 	_run("test_board_initializes_with_gems", test_board_initializes_with_gems)
 	_run("test_hud_initializes_from_board", test_hud_initializes_from_board)
 
+	# Gameplay flow regression tests (Phase 4)
+	_run("test_main_menu_screen_loads", test_main_menu_screen_loads)
+	_run("test_level_select_screen_loads", test_level_select_screen_loads)
+	_run("test_profile_popup_class_available", test_profile_popup_class_available)
+	_run("test_all_screen_scripts_compile", test_all_screen_scripts_compile)
+	_run("test_gameplay_flow_start_level", test_gameplay_flow_start_level)
+
 	# Print summary
 	print("\n==============================================")
 	print("  Results: %d/%d passed, %d failed" % [_tests_passed, _tests_run, _tests_failed])
@@ -706,7 +713,7 @@ func test_level_loader_level_1() -> void:
 		_assert_eq(board.level_id, 1, "level_id is 1")
 		_assert_eq(board.width, 7, "width is 7")
 		_assert_eq(board.height, 7, "height is 7")
-		_assert_eq(board.move_limit, 40, "move limit is 40")
+		_assert_eq(board.move_limit, 60, "move limit is 60")
 		_assert_gt(board.objectives.size(), 0, "has objectives")
 		_assert_gt(board.gem_pool.size(), 0, "has gem pool")
 
@@ -818,3 +825,102 @@ func test_hud_initializes_from_board() -> void:
 	_assert_eq(move_label.text, str(board.move_limit), "moves show level move_limit")
 
 	instance.queue_free()
+
+
+# ============================================================
+# GAMEPLAY FLOW REGRESSION TESTS (Phase 4)
+# ============================================================
+
+func test_main_menu_screen_loads() -> void:
+	## Regression: main_menu_screen.tscn must load and its script must compile.
+	var scene: PackedScene = load("res://scenes/screens/main_menu_screen.tscn") as PackedScene
+	_assert_true(scene != null, "main_menu_screen.tscn loads")
+	var instance: Node = scene.instantiate()
+	_assert_true(instance != null, "main_menu instantiates")
+
+	# Verify script is actually attached and running (not fallback Control)
+	_assert_true(instance.has_method("_on_play_pressed"), "script has _on_play_pressed")
+	_assert_true(instance.has_method("_on_quit_pressed"), "script has _on_quit_pressed")
+
+	# Verify key child nodes exist
+	var play_btn: Node = instance.get_node_or_null("PlayButton")
+	_assert_true(play_btn != null, "PlayButton node exists")
+	var quit_btn: Node = instance.get_node_or_null("QuitButton")
+	_assert_true(quit_btn != null, "QuitButton node exists")
+
+	# Add to tree so _ready runs, then check signals connected
+	add_child(instance)
+	_assert_true(play_btn.is_connected("pressed", instance._on_play_pressed), "PlayButton signal connected")
+	_assert_true(quit_btn.is_connected("pressed", instance._on_quit_pressed), "QuitButton signal connected")
+
+	instance.queue_free()
+
+
+func test_level_select_screen_loads() -> void:
+	## Regression: level_select_screen.tscn must load with its script.
+	var scene: PackedScene = load("res://scenes/screens/level_select_screen.tscn") as PackedScene
+	_assert_true(scene != null, "level_select_screen.tscn loads")
+	var instance: Node = scene.instantiate()
+	_assert_true(instance != null, "level_select instantiates")
+
+	add_child(instance)
+	# Should have level buttons created
+	var grid: Node = instance.get_node_or_null("ScrollContainer/LevelGrid")
+	_assert_true(grid != null, "LevelGrid exists")
+	_assert_gt(grid.get_child_count(), 0, "level buttons created")
+
+	instance.queue_free()
+
+
+func test_profile_popup_class_available() -> void:
+	## Regression: ProfilePopup class_name must be registered globally.
+	var script: GDScript = load("res://scripts/ui/profile_popup.gd") as GDScript
+	_assert_true(script != null, "profile_popup.gd loads")
+	_assert_true(script.can_instantiate(), "ProfilePopup can instantiate")
+
+
+func test_all_screen_scripts_compile() -> void:
+	## Regression: every UI script must compile without parse errors.
+	var scripts := [
+		"res://scripts/ui/main_menu_screen.gd",
+		"res://scripts/ui/level_select_screen.gd",
+		"res://scripts/ui/game_over_popup.gd",
+		"res://scripts/ui/hud.gd",
+		"res://scripts/ui/settings_screen.gd",
+		"res://scripts/ui/profile_popup.gd",
+	]
+	for path in scripts:
+		var script: GDScript = load(path) as GDScript
+		_assert_true(script != null, "%s compiles" % path.get_file())
+
+
+func test_gameplay_flow_start_level() -> void:
+	## Regression: full flow from level load to board init to game state check.
+	# Load level
+	var board := LevelLoader.load_level(1)
+	_assert_true(board != null, "level 1 loads for gameplay")
+	_assert_gt(board.move_limit, 0, "move_limit > 0")
+	_assert_gt(board.objectives.size(), 0, "has objectives")
+
+	# Initialize board with gems via MatchEngine
+	var engine := MatchEngine.new()
+	engine.board = board
+	engine.fill_board_initial()
+
+	# Verify board has playable gems
+	var gem_count: int = 0
+	for r in range(board.height):
+		for c in range(board.width):
+			var cell := board.get_cell(r, c)
+			if cell != null and cell.has_gem():
+				gem_count += 1
+	_assert_gt(gem_count, 10, "board has playable gems")
+
+	# Verify game is not immediately over
+	_assert_true(not board.is_game_over, "game not over at start")
+	_assert_true(not board.is_won, "level not won at start")
+
+	# Verify valid moves exist (player can play)
+	var hint := HintSystem.new(board)
+	var move: Dictionary = hint.find_best_hint()
+	_assert_true(not move.is_empty(), "valid moves available at start")

@@ -1,62 +1,167 @@
 ﻿{
-  "level_id": 19,
-  "chapter": 1,
-  "room": 1,
-  "difficulty": "MEDIUM",
-  "title": "Power Play",
+    "level_id":  19,
+    "chapter":  1,
+    "room":  1,
+    "difficulty":  "MEDIUM",
+    "title":  "Power Play",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST"
+                               ]
+              },
+    "move_limit":  35,
+    "objectives":  [
+                       {
+                           "type":  "CREATE_POWERUP",
+                           "params":  {
+                                          "powerup":  "ROCKET_H",
+                                          "powerup_name":  "Rockets",
+                                          "count":  2
+                                      }
+                       },
+                       {
+                           "type":  "COLLECT_COLOR",
+                           "params":  {
+                                          "color":  "TOPAZ",
+                                          "count":  16
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  2,
+                         "col":  2,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     },
+                     {
+                         "row":  2,
+                         "col":  4,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     },
+                     {
+                         "row":  6,
+                         "col":  2,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     },
+                     {
+                         "row":  6,
+                         "col":  4,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 25,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "CREATE_POWERUP",
-      "params": { "powerup": "ROCKET_H", "powerup_name": "Rockets", "count": 2 }
-    },
-    {
-      "type": "COLLECT_COLOR",
-      "params": { "color": "TOPAZ", "count": 20 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 2, "col": 2, "type": "REINFORCED_CRATE", "hp": 2 },
-    { "row": 2, "col": 4, "type": "REINFORCED_CRATE", "hp": 2 },
-    { "row": 6, "col": 2, "type": "REINFORCED_CRATE", "hp": 2 },
-    { "row": 6, "col": 4, "type": "REINFORCED_CRATE", "hp": 2 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 75,
-    "coins_per_remaining_move": 10,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 8,
-      "3_star": 16
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Create power-ups to beat reinforced crates"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  75,
+                    "coins_per_remaining_move":  10,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  8,
+                                            "3_star":  17
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Create power-ups to beat reinforced crates"
+                 }
 }

@@ -1,72 +1,208 @@
 ﻿{
-  "level_id": 45,
-  "chapter": 2,
-  "room": 1,
-  "difficulty": "HARD",
-  "title": "The Arena",
+    "level_id":  45,
+    "chapter":  2,
+    "room":  1,
+    "difficulty":  "HARD",
+    "title":  "The Arena",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     0
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     0,
+                                     1,
+                                     0,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     0,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     0,
+                                     1,
+                                     0,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     0
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST"
+                               ]
+              },
+    "move_limit":  30,
+    "objectives":  [
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "VASE",
+                                          "count":  4
+                                      }
+                       },
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "ICE",
+                                          "count":  5
+                                      }
+                       },
+                       {
+                           "type":  "SCORE_TARGET",
+                           "params":  {
+                                          "score":  2000
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  1,
+                         "col":  3,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  3,
+                         "col":  1,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  5,
+                         "col":  5,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  7,
+                         "col":  3,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  1,
+                         "col":  1,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  1,
+                         "col":  5,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  3,
+                         "col":  3,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  5,
+                         "col":  3,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  7,
+                         "col":  1,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  7,
+                         "col":  5,
+                         "type":  "ICE",
+                         "hp":  1
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [0,1,1,1,1,1,0],
-      [1,1,1,1,1,1,1],
-      [1,1,0,1,0,1,1],
-      [1,1,1,1,1,1,1],
-      [1,0,1,1,1,0,1],
-      [1,1,1,1,1,1,1],
-      [1,1,0,1,0,1,1],
-      [1,1,1,1,1,1,1],
-      [0,1,1,1,1,1,0]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 20,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "VASE", "count": 4 }
-    },
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "ICE", "count": 6 }
-    },
-    {
-      "type": "SCORE_TARGET",
-      "params": { "score": 2500 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 1, "col": 3, "type": "VASE", "hp": 3 },
-    { "row": 3, "col": 1, "type": "VASE", "hp": 3 },
-    { "row": 5, "col": 5, "type": "VASE", "hp": 3 },
-    { "row": 7, "col": 3, "type": "VASE", "hp": 3 },
-    { "row": 1, "col": 1, "type": "ICE", "hp": 1 },
-    { "row": 1, "col": 5, "type": "ICE", "hp": 1 },
-    { "row": 3, "col": 3, "type": "ICE", "hp": 1 },
-    { "row": 5, "col": 3, "type": "ICE", "hp": 1 },
-    { "row": 7, "col": 1, "type": "ICE", "hp": 1 },
-    { "row": 7, "col": 5, "type": "ICE", "hp": 1 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 95,
-    "coins_per_remaining_move": 12,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 5,
-      "3_star": 10
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Arena board with holes, vases and ICE"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  95,
+                    "coins_per_remaining_move":  12,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  7,
+                                            "3_star":  15
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Arena board with holes, vases and ICE"
+                 }
 }

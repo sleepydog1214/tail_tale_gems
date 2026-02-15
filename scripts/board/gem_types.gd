@@ -79,12 +79,12 @@ static var COLOR_NAMES: Dictionary = {
 
 # --- Color hex values for rendering ---
 static var COLOR_HEX: Dictionary = {
-	GemColor.RUBY: Color("e74c3c"),
-	GemColor.SAPPHIRE: Color("3498db"),
-	GemColor.EMERALD: Color("2ecc71"),
-	GemColor.TOPAZ: Color("f1c40f"),
-	GemColor.AMETHYST: Color("9b59b6"),
-	GemColor.DIAMOND: Color("ecf0f1"),
+	GemColor.RUBY: Color("ff3b4a"),
+	GemColor.SAPPHIRE: Color("4dabf7"),
+	GemColor.EMERALD: Color("51cf66"),
+	GemColor.TOPAZ: Color("ffd43b"),
+	GemColor.AMETHYST: Color("cc5de8"),
+	GemColor.DIAMOND: Color("a5d8ff"),
 }
 
 # --- Power-up display info ---

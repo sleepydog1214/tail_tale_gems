@@ -1,70 +1,197 @@
 ﻿{
-  "level_id": 30,
-  "chapter": 1,
-  "room": 1,
-  "difficulty": "HARD",
-  "title": "Castle Gates",
+    "level_id":  30,
+    "chapter":  1,
+    "room":  1,
+    "difficulty":  "HARD",
+    "title":  "Castle Gates",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     0
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     0,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     0,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     0
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST",
+                                   "DIAMOND"
+                               ]
+              },
+    "move_limit":  30,
+    "objectives":  [
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "VASE",
+                                          "count":  4
+                                      }
+                       },
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "REINFORCED_CRATE",
+                                          "count":  4
+                                      }
+                       },
+                       {
+                           "type":  "SCORE_TARGET",
+                           "params":  {
+                                          "score":  2400
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  1,
+                         "col":  2,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  1,
+                         "col":  4,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  7,
+                         "col":  2,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  7,
+                         "col":  4,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  2,
+                         "col":  1,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     },
+                     {
+                         "row":  2,
+                         "col":  5,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     },
+                     {
+                         "row":  6,
+                         "col":  1,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     },
+                     {
+                         "row":  6,
+                         "col":  5,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [0,1,1,1,1,1,0],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,0,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,0,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [0,1,1,1,1,1,0]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST", "DIAMOND"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 20,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "VASE", "count": 4 }
-    },
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "REINFORCED_CRATE", "count": 4 }
-    },
-    {
-      "type": "SCORE_TARGET",
-      "params": { "score": 3000 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 1, "col": 2, "type": "VASE", "hp": 3 },
-    { "row": 1, "col": 4, "type": "VASE", "hp": 3 },
-    { "row": 7, "col": 2, "type": "VASE", "hp": 3 },
-    { "row": 7, "col": 4, "type": "VASE", "hp": 3 },
-    { "row": 2, "col": 1, "type": "REINFORCED_CRATE", "hp": 2 },
-    { "row": 2, "col": 5, "type": "REINFORCED_CRATE", "hp": 2 },
-    { "row": 6, "col": 1, "type": "REINFORCED_CRATE", "hp": 2 },
-    { "row": 6, "col": 5, "type": "REINFORCED_CRATE", "hp": 2 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 100,
-    "coins_per_remaining_move": 15,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 6,
-      "3_star": 12
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Chapter 1 finale - heavy mixed blockers"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  100,
+                    "coins_per_remaining_move":  15,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  7,
+                                            "3_star":  15
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Chapter 1 finale - heavy mixed blockers"
+                 }
 }

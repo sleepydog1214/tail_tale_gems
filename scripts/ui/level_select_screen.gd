@@ -17,7 +17,7 @@ func _ready() -> void:
 
 	# Style title
 	title_label.add_theme_font_size_override("font_size", 28)
-	title_label.add_theme_color_override("font_color", Color("f1c40f"))
+	title_label.add_theme_color_override("font_color", Color("e84393"))
 
 	# Add energy display below title
 	_energy_label = Label.new()
@@ -28,23 +28,54 @@ func _ready() -> void:
 	_energy_label.offset_left = 40
 	_energy_label.offset_right = -40
 	_energy_label.add_theme_font_size_override("font_size", 16)
-	_energy_label.add_theme_color_override("font_color", Color("3498db"))
+	_energy_label.add_theme_color_override("font_color", Color("6b3a5c"))
 	add_child(_energy_label)
 	_update_energy_display()
+
+	# Add profile display
+	var profile_lbl := Label.new()
+	profile_lbl.name = "ProfileLabel"
+	profile_lbl.set_anchors_preset(PRESET_TOP_LEFT)
+	profile_lbl.offset_left = 10
+	profile_lbl.offset_top = 10
+	profile_lbl.offset_right = 200
+	profile_lbl.offset_bottom = 35
+	profile_lbl.add_theme_font_size_override("font_size", 14)
+	profile_lbl.add_theme_color_override("font_color", Color("6b3a5c"))
+	var avatar := SaveManager.get_profile_avatar()
+	var pname := SaveManager.get_profile_name()
+	profile_lbl.text = "%s %s" % [avatar, pname] if not pname.is_empty() else ""
+	add_child(profile_lbl)
+
+	# Add total stars progress bar
+	var total_stars: int = SaveManager.get_total_stars()
+	var max_stars: int = max_level * 3
+	var progress_lbl := Label.new()
+	progress_lbl.name = "ProgressLabel"
+	progress_lbl.set_anchors_preset(PRESET_TOP_WIDE)
+	progress_lbl.offset_top = 95
+	progress_lbl.offset_bottom = 115
+	progress_lbl.offset_left = 40
+	progress_lbl.offset_right = -40
+	progress_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	progress_lbl.add_theme_font_size_override("font_size", 14)
+	progress_lbl.add_theme_color_override("font_color", Color("e84393"))
+	progress_lbl.text = "⭐ %d / %d Stars" % [total_stars, max_stars]
+	add_child(progress_lbl)
 
 	# Wire back button if present
 	var back_btn = get_node_or_null("BackButton")
 	if back_btn:
 		back_btn.pressed.connect(_on_back_pressed)
 		var style := StyleBoxFlat.new()
-		style.bg_color = Color("34495e")
+		style.bg_color = Color("a0628a")
 		style.corner_radius_top_left = 8
 		style.corner_radius_top_right = 8
 		style.corner_radius_bottom_left = 8
 		style.corner_radius_bottom_right = 8
 		back_btn.add_theme_stylebox_override("normal", style)
 		var hover_style: StyleBoxFlat = style.duplicate() as StyleBoxFlat
-		hover_style.bg_color = Color("4a6785")
+		hover_style.bg_color = Color("b87399")
 		back_btn.add_theme_stylebox_override("hover", hover_style)
 		back_btn.add_theme_color_override("font_color", Color.WHITE)
 		back_btn.add_theme_font_size_override("font_size", 18)
@@ -59,7 +90,7 @@ func _update_energy_display() -> void:
 		elif energy <= 3:
 			_energy_label.add_theme_color_override("font_color", Color("f39c12"))
 		else:
-			_energy_label.add_theme_color_override("font_color", Color("3498db"))
+			_energy_label.add_theme_color_override("font_color", Color("e84393"))
 
 
 func _on_level_selected(level_id: int) -> void:
@@ -95,7 +126,7 @@ func _create_level_buttons() -> void:
 			btn.text = "🔒"
 			btn.disabled = true
 			var style := StyleBoxFlat.new()
-			style.bg_color = Color("2c3e50")
+			style.bg_color = Color(0.85, 0.78, 0.82)
 			style.corner_radius_top_left = 12
 			style.corner_radius_top_right = 12
 			style.corner_radius_bottom_left = 12
@@ -108,11 +139,11 @@ func _create_level_buttons() -> void:
 			btn.text = str(i)
 			var bg_color: Color
 			if stars >= 3:
-				bg_color = Color("27ae60")  # Green for 3 stars
+				bg_color = Color("e84393")  # Pink for 3 stars
 			elif stars >= 1:
-				bg_color = Color("3498db")  # Blue for completed
+				bg_color = Color("fd79a8")  # Light pink for completed
 			else:
-				bg_color = Color("8e44ad")  # Purple for available
+				bg_color = Color("a0628a")  # Mauve for available
 			var style := StyleBoxFlat.new()
 			style.bg_color = bg_color
 			style.corner_radius_top_left = 12
@@ -148,7 +179,7 @@ func _create_level_buttons() -> void:
 			for s in range(3):
 				star_text += "★" if s < stars else "☆"
 			star_label.text = star_text
-			star_label.add_theme_color_override("font_color", Color("f1c40f") if stars > 0 else Color("555555"))
+			star_label.add_theme_color_override("font_color", Color("e84393") if stars > 0 else Color("bbaaaa"))
 		container.add_child(star_label)
 
 		level_grid.add_child(container)

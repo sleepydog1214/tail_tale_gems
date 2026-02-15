@@ -1,63 +1,172 @@
 ﻿{
-  "level_id": 17,
-  "chapter": 1,
-  "room": 1,
-  "difficulty": "MEDIUM",
-  "title": "Chain Links",
+    "level_id":  17,
+    "chapter":  1,
+    "room":  1,
+    "difficulty":  "MEDIUM",
+    "title":  "Chain Links",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST"
+                               ]
+              },
+    "move_limit":  40,
+    "objectives":  [
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "CHAIN",
+                                          "count":  4
+                                      }
+                       },
+                       {
+                           "type":  "COLLECT_COLOR",
+                           "params":  {
+                                          "color":  "EMERALD",
+                                          "count":  12
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  2,
+                         "col":  3,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  3,
+                         "col":  2,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  3,
+                         "col":  4,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  5,
+                         "col":  2,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     },
+                     {
+                         "row":  5,
+                         "col":  4,
+                         "type":  "CHAIN",
+                         "hp":  1
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 28,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "CHAIN", "count": 5 }
-    },
-    {
-      "type": "COLLECT_COLOR",
-      "params": { "color": "EMERALD", "count": 15 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 2, "col": 3, "type": "CHAIN", "hp": 1 },
-    { "row": 3, "col": 2, "type": "CHAIN", "hp": 1 },
-    { "row": 3, "col": 4, "type": "CHAIN", "hp": 1 },
-    { "row": 5, "col": 2, "type": "CHAIN", "hp": 1 },
-    { "row": 5, "col": 4, "type": "CHAIN", "hp": 1 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 70,
-    "coins_per_remaining_move": 10,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 9,
-      "3_star": 18
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Introduces CHAIN blocker"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  70,
+                    "coins_per_remaining_move":  10,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  10,
+                                            "3_star":  20
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Introduces CHAIN blocker"
+                 }
 }

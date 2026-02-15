@@ -1,61 +1,170 @@
-{
-  "level_id": 7,
-  "chapter": 1,
-  "room": 1,
-  "difficulty": "EASY",
-  "title": "Crate Corridor",
+﻿{
+    "level_id":  7,
+    "chapter":  1,
+    "room":  1,
+    "difficulty":  "EASY",
+    "title":  "Crate Corridor",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ"
+                               ]
+              },
+    "move_limit":  45,
+    "objectives":  [
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "CRATE",
+                                          "count":  5
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  2,
+                         "col":  1,
+                         "type":  "CRATE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  2,
+                         "col":  5,
+                         "type":  "CRATE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  4,
+                         "col":  2,
+                         "type":  "CRATE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  4,
+                         "col":  4,
+                         "type":  "CRATE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  6,
+                         "col":  1,
+                         "type":  "CRATE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  6,
+                         "col":  5,
+                         "type":  "CRATE",
+                         "hp":  1
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 30,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "CRATE", "count": 6 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 2, "col": 1, "type": "CRATE", "hp": 1 },
-    { "row": 2, "col": 5, "type": "CRATE", "hp": 1 },
-    { "row": 4, "col": 2, "type": "CRATE", "hp": 1 },
-    { "row": 4, "col": 4, "type": "CRATE", "hp": 1 },
-    { "row": 6, "col": 1, "type": "CRATE", "hp": 1 },
-    { "row": 6, "col": 5, "type": "CRATE", "hp": 1 }
-  ],
-
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 60,
-    "coins_per_remaining_move": 8,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 10,
-      "3_star": 20
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Easy level 2: more crates in a symmetrical pattern. Teaches clearing blockers as primary goal."
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  60,
+                    "coins_per_remaining_move":  8,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  11,
+                                            "3_star":  22
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Easy level 2: more crates in a symmetrical pattern. Teaches clearing blockers as primary goal."
+                 }
 }

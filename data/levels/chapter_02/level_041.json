@@ -1,62 +1,168 @@
 ﻿{
-  "level_id": 41,
-  "chapter": 2,
-  "room": 1,
-  "difficulty": "HARD",
-  "title": "Storm Chaser",
+    "level_id":  41,
+    "chapter":  2,
+    "room":  1,
+    "difficulty":  "HARD",
+    "title":  "Storm Chaser",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST",
+                                   "DIAMOND"
+                               ]
+              },
+    "move_limit":  30,
+    "objectives":  [
+                       {
+                           "type":  "CREATE_POWERUP",
+                           "params":  {
+                                          "powerup":  "ROCKET_H",
+                                          "powerup_name":  "Rockets",
+                                          "count":  3
+                                      }
+                       },
+                       {
+                           "type":  "COLLECT_COLOR",
+                           "params":  {
+                                          "color":  "DIAMOND",
+                                          "count":  12
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  2,
+                         "col":  2,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     },
+                     {
+                         "row":  2,
+                         "col":  4,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     },
+                     {
+                         "row":  6,
+                         "col":  2,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     },
+                     {
+                         "row":  6,
+                         "col":  4,
+                         "type":  "REINFORCED_CRATE",
+                         "hp":  2
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST", "DIAMOND"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 20,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "CREATE_POWERUP",
-      "params": { "powerup": "ROCKET_H", "powerup_name": "Rockets", "count": 3 }
-    },
-    {
-      "type": "COLLECT_COLOR",
-      "params": { "color": "DIAMOND", "count": 15 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 2, "col": 2, "type": "REINFORCED_CRATE", "hp": 2 },
-    { "row": 2, "col": 4, "type": "REINFORCED_CRATE", "hp": 2 },
-    { "row": 6, "col": 2, "type": "REINFORCED_CRATE", "hp": 2 },
-    { "row": 6, "col": 4, "type": "REINFORCED_CRATE", "hp": 2 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 90,
-    "coins_per_remaining_move": 12,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 6,
-      "3_star": 12
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Create rockets with 6 colors and reinforced crates"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  90,
+                    "coins_per_remaining_move":  12,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  7,
+                                            "3_star":  15
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Create rockets with 6 colors and reinforced crates"
+                 }
 }

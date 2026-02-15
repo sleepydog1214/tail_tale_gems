@@ -1,62 +1,183 @@
 ﻿{
-  "level_id": 47,
-  "chapter": 2,
-  "room": 1,
-  "difficulty": "HARD",
-  "title": "Vase Museum",
+    "level_id":  47,
+    "chapter":  2,
+    "room":  1,
+    "difficulty":  "HARD",
+    "title":  "Vase Museum",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     0
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     0
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST"
+                               ]
+              },
+    "move_limit":  30,
+    "objectives":  [
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "VASE",
+                                          "count":  7
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  1,
+                         "col":  2,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  1,
+                         "col":  4,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  3,
+                         "col":  1,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  3,
+                         "col":  5,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  5,
+                         "col":  1,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  5,
+                         "col":  5,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  7,
+                         "col":  2,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  7,
+                         "col":  4,
+                         "type":  "VASE",
+                         "hp":  3
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [0,1,1,1,1,1,0],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [0,1,1,1,1,1,0]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 20,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "VASE", "count": 8 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 1, "col": 2, "type": "VASE", "hp": 3 },
-    { "row": 1, "col": 4, "type": "VASE", "hp": 3 },
-    { "row": 3, "col": 1, "type": "VASE", "hp": 3 },
-    { "row": 3, "col": 5, "type": "VASE", "hp": 3 },
-    { "row": 5, "col": 1, "type": "VASE", "hp": 3 },
-    { "row": 5, "col": 5, "type": "VASE", "hp": 3 },
-    { "row": 7, "col": 2, "type": "VASE", "hp": 3 },
-    { "row": 7, "col": 4, "type": "VASE", "hp": 3 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 100,
-    "coins_per_remaining_move": 15,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 5,
-      "3_star": 10
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Eight vases on shaped board"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  100,
+                    "coins_per_remaining_move":  15,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  7,
+                                            "3_star":  15
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Eight vases on shaped board"
+                 }
 }

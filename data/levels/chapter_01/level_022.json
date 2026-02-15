@@ -1,67 +1,196 @@
 ﻿{
-  "level_id": 22,
-  "chapter": 1,
-  "room": 1,
-  "difficulty": "MEDIUM",
-  "title": "Vase and Ice",
+    "level_id":  22,
+    "chapter":  1,
+    "room":  1,
+    "difficulty":  "MEDIUM",
+    "title":  "Vase and Ice",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     0
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     0
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST"
+                               ]
+              },
+    "move_limit":  40,
+    "objectives":  [
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "VASE",
+                                          "count":  3
+                                      }
+                       },
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "ICE",
+                                          "count":  5
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  3,
+                         "col":  3,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  5,
+                         "col":  2,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  5,
+                         "col":  4,
+                         "type":  "VASE",
+                         "hp":  3
+                     },
+                     {
+                         "row":  1,
+                         "col":  1,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  1,
+                         "col":  5,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  4,
+                         "col":  1,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  4,
+                         "col":  5,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  7,
+                         "col":  1,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  7,
+                         "col":  5,
+                         "type":  "ICE",
+                         "hp":  1
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [0,1,1,1,1,1,0],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [0,1,1,1,1,1,0]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 26,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "VASE", "count": 3 }
-    },
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "ICE", "count": 6 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 3, "col": 3, "type": "VASE", "hp": 3 },
-    { "row": 5, "col": 2, "type": "VASE", "hp": 3 },
-    { "row": 5, "col": 4, "type": "VASE", "hp": 3 },
-    { "row": 1, "col": 1, "type": "ICE", "hp": 1 },
-    { "row": 1, "col": 5, "type": "ICE", "hp": 1 },
-    { "row": 4, "col": 1, "type": "ICE", "hp": 1 },
-    { "row": 4, "col": 5, "type": "ICE", "hp": 1 },
-    { "row": 7, "col": 1, "type": "ICE", "hp": 1 },
-    { "row": 7, "col": 5, "type": "ICE", "hp": 1 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 80,
-    "coins_per_remaining_move": 10,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 8,
-      "3_star": 16
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "VASE + ICE combo"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  80,
+                    "coins_per_remaining_move":  10,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  10,
+                                            "3_star":  20
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "VASE + ICE combo"
+                 }
 }

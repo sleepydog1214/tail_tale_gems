@@ -19,18 +19,18 @@ func _ready() -> void:
 	# Style HUD labels
 	if level_label:
 		level_label.add_theme_font_size_override("font_size", 20)
-		level_label.add_theme_color_override("font_color", Color("f1c40f"))
+		level_label.add_theme_color_override("font_color", Color("e84393"))
 	if move_label:
 		move_label.add_theme_font_size_override("font_size", 32)
-		move_label.add_theme_color_override("font_color", Color.WHITE)
+		move_label.add_theme_color_override("font_color", Color("6b3a5c"))
 	if score_label:
 		score_label.add_theme_font_size_override("font_size", 20)
-		score_label.add_theme_color_override("font_color", Color.WHITE)
+		score_label.add_theme_color_override("font_color", Color("6b3a5c"))
 
 	# Style panels with dark backgrounds
-	_style_panel($MovePanel, Color(0.12, 0.14, 0.24, 0.9))
-	_style_panel($ScorePanel, Color(0.12, 0.14, 0.24, 0.9))
-	_style_panel($ObjectivePanel, Color(0.10, 0.12, 0.20, 0.8))
+	_style_panel($MovePanel, Color(0.90, 0.78, 0.85, 0.9))
+	_style_panel($ScorePanel, Color(0.90, 0.78, 0.85, 0.9))
+	_style_panel($ObjectivePanel, Color(0.88, 0.76, 0.83, 0.8))
 
 	# Energy display
 	_energy_label = Label.new()
@@ -42,7 +42,7 @@ func _ready() -> void:
 	_energy_label.offset_bottom = 75
 	_energy_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_energy_label.add_theme_font_size_override("font_size", 14)
-	_energy_label.add_theme_color_override("font_color", Color("3498db"))
+	_energy_label.add_theme_color_override("font_color", Color("e84393"))
 	add_child(_energy_label)
 
 	# Booster toolbar at bottom
@@ -79,16 +79,16 @@ func _create_booster_bar() -> void:
 		btn.add_theme_font_size_override("font_size", 16)
 
 		var style := StyleBoxFlat.new()
-		style.bg_color = Color(0.18, 0.22, 0.35, 0.9) if count > 0 else Color(0.12, 0.14, 0.22, 0.6)
+		style.bg_color = Color(0.90, 0.78, 0.85, 0.9) if count > 0 else Color(0.85, 0.75, 0.80, 0.6)
 		style.corner_radius_top_left = 10
 		style.corner_radius_top_right = 10
 		style.corner_radius_bottom_left = 10
 		style.corner_radius_bottom_right = 10
 		btn.add_theme_stylebox_override("normal", style)
 		var hover: StyleBoxFlat = style.duplicate() as StyleBoxFlat
-		hover.bg_color = Color(0.24, 0.30, 0.48, 0.9)
+		hover.bg_color = Color(0.95, 0.82, 0.90, 0.9)
 		btn.add_theme_stylebox_override("hover", hover)
-		btn.add_theme_color_override("font_color", Color.WHITE if count > 0 else Color("666666"))
+		btn.add_theme_color_override("font_color", Color("6b3a5c") if count > 0 else Color("999999"))
 		btn.add_theme_color_override("font_disabled_color", Color("444444"))
 
 		var booster_type: String = str(b["type"])
@@ -110,7 +110,7 @@ func _style_panel(panel: PanelContainer, bg_color: Color) -> void:
 	style.content_margin_top = 4
 	style.content_margin_bottom = 4
 	style.border_width_bottom = 2
-	style.border_color = Color(0.2, 0.24, 0.38, 0.6)
+	style.border_color = Color(0.85, 0.70, 0.78, 0.6)
 	panel.add_theme_stylebox_override("panel", style)
 
 
@@ -140,7 +140,7 @@ func _setup_objectives() -> void:
 		var icon := Label.new()
 		icon.text = obj.get_icon_label()
 		icon.add_theme_font_size_override("font_size", 18)
-		icon.add_theme_color_override("font_color", Color("f39c12"))
+		icon.add_theme_color_override("font_color", Color("e84393"))
 		icon.custom_minimum_size = Vector2(24, 0)
 		icon.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		hbox.add_child(icon)
@@ -148,7 +148,7 @@ func _setup_objectives() -> void:
 		# Objective text
 		var label := Label.new()
 		label.add_theme_font_size_override("font_size", 15)
-		label.add_theme_color_override("font_color", Color.WHITE)
+		label.add_theme_color_override("font_color", Color("6b3a5c"))
 		label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		hbox.add_child(label)
 
@@ -171,7 +171,7 @@ func _update_display() -> void:
 	elif remaining <= 5:
 		move_label.add_theme_color_override("font_color", Color("f39c12"))
 	else:
-		move_label.add_theme_color_override("font_color", Color.WHITE)
+		move_label.add_theme_color_override("font_color", Color("6b3a5c"))
 
 	# Animate move count decrease
 	if remaining != _prev_moves and _prev_moves >= 0:
@@ -194,9 +194,9 @@ func _update_display() -> void:
 			var obj := board_state.objectives[i]
 			_objective_labels[i].text = obj.get_display_text()
 			if obj.is_complete():
-				_objective_labels[i].add_theme_color_override("font_color", Color("2ecc71"))
+				_objective_labels[i].add_theme_color_override("font_color", Color("e84393"))
 			else:
-				_objective_labels[i].add_theme_color_override("font_color", Color.WHITE)
+				_objective_labels[i].add_theme_color_override("font_color", Color("6b3a5c"))
 
 
 func _pulse_node(node: Control) -> void:

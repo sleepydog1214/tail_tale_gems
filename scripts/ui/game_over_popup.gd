@@ -24,7 +24,7 @@ func _ready() -> void:
 	var panel := $Panel as Panel
 	if panel:
 		var style := StyleBoxFlat.new()
-		style.bg_color = Color(0.1, 0.12, 0.2, 0.95)
+		style.bg_color = Color(0.96, 0.88, 0.92, 0.95)
 		style.corner_radius_top_left = 20
 		style.corner_radius_top_right = 20
 		style.corner_radius_bottom_left = 20
@@ -33,7 +33,7 @@ func _ready() -> void:
 		style.border_width_bottom = 3
 		style.border_width_left = 3
 		style.border_width_right = 3
-		style.border_color = Color("f1c40f")
+		style.border_color = Color("e84393")
 		style.shadow_color = Color(0, 0, 0, 0.5)
 		style.shadow_size = 8
 		panel.add_theme_stylebox_override("panel", style)
@@ -46,16 +46,16 @@ func _ready() -> void:
 
 	# Style score
 	score_label.add_theme_font_size_override("font_size", 20)
-	score_label.add_theme_color_override("font_color", Color("ecf0f1"))
+	score_label.add_theme_color_override("font_color", Color("a0628a"))
 
 	# Style message
 	message_label.add_theme_font_size_override("font_size", 16)
-	message_label.add_theme_color_override("font_color", Color("bdc3c7"))
+	message_label.add_theme_color_override("font_color", Color("a0628a"))
 
 	# Style buttons
-	_style_button(next_button, Color("27ae60"), Color("1e8449"))
-	_style_button(retry_button, Color("3498db"), Color("2471a3"))
-	_style_button(menu_button, Color("34495e"), Color("2c3e50"))
+	_style_button(next_button, Color("e84393"), Color("c0327a"))
+	_style_button(retry_button, Color("fd79a8"), Color("e84393"))
+	_style_button(menu_button, Color("a0628a"), Color("8b4f78"))
 
 
 func _style_button(btn: Button, bg_color: Color, border_color: Color) -> void:
@@ -88,17 +88,20 @@ func _style_button(btn: Button, bg_color: Color, border_color: Color) -> void:
 
 
 func show_win(stars: int, score: int, coins: int) -> void:
-	title_label.text = "Level Complete!"
-	title_label.add_theme_color_override("font_color", Color("f1c40f"))
+	title_label.text = "🐱 Level Complete! 🐱"
+	title_label.add_theme_color_override("font_color", Color("e84393"))
 
 	var star_text := ""
 	for i in range(3):
 		star_text += "★" if i < stars else "☆"
 	stars_label.text = star_text
-	stars_label.add_theme_color_override("font_color", Color("f1c40f"))
+	stars_label.add_theme_color_override("font_color", Color("e84393"))
 
 	score_label.text = "Score: %d" % score
-	message_label.text = "+%d coins" % coins
+
+	# Show coins earned and total progress
+	var total_stars: int = SaveManager.get_total_stars()
+	message_label.text = "+%d coins  •  ⭐ %d total stars" % [coins, total_stars]
 
 	next_button.visible = true
 	retry_button.visible = true
@@ -109,19 +112,19 @@ func show_win(stars: int, score: int, coins: int) -> void:
 		var style: StyleBoxFlat = panel.get_theme_stylebox("panel") as StyleBoxFlat
 		if style:
 			var win_style: StyleBoxFlat = style.duplicate() as StyleBoxFlat
-			win_style.border_color = Color("f1c40f")
+			win_style.border_color = Color("e84393")
 			panel.add_theme_stylebox_override("panel", win_style)
 
 	_show_animated()
 
 
 func show_lose(score: int) -> void:
-	title_label.text = "Out of Moves!"
+	title_label.text = "😿 Out of Moves!"
 	title_label.add_theme_color_override("font_color", Color("e74c3c"))
 	stars_label.text = "☆☆☆"
 	stars_label.add_theme_color_override("font_color", Color("666666"))
 	score_label.text = "Score: %d" % score
-	message_label.text = "Try again?"
+	message_label.text = "Try again, nya~?"
 	next_button.visible = false
 	retry_button.visible = true
 

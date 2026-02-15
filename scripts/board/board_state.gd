@@ -74,11 +74,12 @@ func all_objectives_complete() -> bool:
 
 func get_stars() -> int:
 	## Calculate stars based on remaining moves.
+	## Generous thresholds — focus on fun, not frustration.
 	var remaining := move_limit - move_count
 	var ratio := float(remaining) / float(move_limit) if move_limit > 0 else 0.0
-	if ratio >= 0.66:
+	if ratio >= 0.5:
 		return 3
-	elif ratio >= 0.33:
+	elif ratio >= 0.2:
 		return 2
 	else:
 		return 1

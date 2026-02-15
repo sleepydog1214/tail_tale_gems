@@ -1,62 +1,183 @@
 ﻿{
-  "level_id": 32,
-  "chapter": 2,
-  "room": 1,
-  "difficulty": "MEDIUM",
-  "title": "Stone Maze",
+    "level_id":  32,
+    "chapter":  2,
+    "room":  1,
+    "difficulty":  "MEDIUM",
+    "title":  "Stone Maze",
+    "board":  {
+                  "width":  7,
+                  "height":  9,
+                  "layout":  [
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     0,
+                                     1,
+                                     0,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     0,
+                                     1,
+                                     1,
+                                     1,
+                                     0,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     0,
+                                     1,
+                                     0,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ],
+                                 [
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1,
+                                     1
+                                 ]
+                             ],
+                  "gem_pool":  [
+                                   "RUBY",
+                                   "SAPPHIRE",
+                                   "EMERALD",
+                                   "TOPAZ",
+                                   "AMETHYST"
+                               ]
+              },
+    "move_limit":  40,
+    "objectives":  [
+                       {
+                           "type":  "REMOVE_BLOCKER",
+                           "params":  {
+                                          "blocker":  "ICE",
+                                          "count":  7
+                                      }
+                       }
+                   ],
+    "blockers":  [
+                     {
+                         "row":  1,
+                         "col":  1,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  1,
+                         "col":  5,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  3,
+                         "col":  2,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  3,
+                         "col":  4,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  5,
+                         "col":  1,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  5,
+                         "col":  5,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  7,
+                         "col":  2,
+                         "type":  "ICE",
+                         "hp":  1
+                     },
+                     {
+                         "row":  7,
+                         "col":  4,
+                         "type":  "ICE",
+                         "hp":  1
+                     }
+                 ],
+    "special_tiles":  [
 
-  "board": {
-    "width": 7,
-    "height": 9,
-    "layout": [
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,0,1,0,1,1],
-      [1,1,1,1,1,1,1],
-      [1,0,1,1,1,0,1],
-      [1,1,1,1,1,1,1],
-      [1,1,0,1,0,1,1],
-      [1,1,1,1,1,1,1],
-      [1,1,1,1,1,1,1]
-    ],
-    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ", "AMETHYST"]
-  },
+                      ],
+    "portals":  [
 
-  "move_limit": 26,
+                ],
+    "conveyors":  [
 
-  "objectives": [
-    {
-      "type": "REMOVE_BLOCKER",
-      "params": { "blocker": "ICE", "count": 8 }
-    }
-  ],
-
-  "blockers": [
-    { "row": 1, "col": 1, "type": "ICE", "hp": 1 },
-    { "row": 1, "col": 5, "type": "ICE", "hp": 1 },
-    { "row": 3, "col": 2, "type": "ICE", "hp": 1 },
-    { "row": 3, "col": 4, "type": "ICE", "hp": 1 },
-    { "row": 5, "col": 1, "type": "ICE", "hp": 1 },
-    { "row": 5, "col": 5, "type": "ICE", "hp": 1 },
-    { "row": 7, "col": 2, "type": "ICE", "hp": 1 },
-    { "row": 7, "col": 4, "type": "ICE", "hp": 1 }
-  ],
-  "special_tiles": [],
-  "portals": [],
-  "conveyors": [],
-
-  "rewards": {
-    "coins_base": 75,
-    "coins_per_remaining_move": 10,
-    "star_thresholds": {
-      "1_star": 0,
-      "2_star": 8,
-      "3_star": 16
-    }
-  },
-
-  "metadata": {
-    "designer": "auto",
-    "notes": "Board with holes, ICE everywhere"
-  }
+                  ],
+    "rewards":  {
+                    "coins_base":  75,
+                    "coins_per_remaining_move":  10,
+                    "star_thresholds":  {
+                                            "1_star":  0,
+                                            "2_star":  10,
+                                            "3_star":  20
+                                        }
+                },
+    "metadata":  {
+                     "designer":  "auto",
+                     "notes":  "Board with holes, ICE everywhere"
+                 }
 }

@@ -16,7 +16,7 @@ func _build_ui(settings: Dictionary) -> void:
 	var bg := ColorRect.new()
 	bg.name = "Background"
 	bg.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
-	bg.color = Color(0.08, 0.1, 0.18, 1.0)
+	bg.color = Color(0.96, 0.88, 0.92, 1.0)
 	add_child(bg)
 
 	# Title
@@ -28,7 +28,7 @@ func _build_ui(settings: Dictionary) -> void:
 	title.offset_top = 40
 	title.offset_bottom = 80
 	title.add_theme_font_size_override("font_size", 32)
-	title.add_theme_color_override("font_color", Color("f1c40f"))
+	title.add_theme_color_override("font_color", Color("e84393"))
 	add_child(title)
 
 	# Scroll container for settings
@@ -82,14 +82,14 @@ func _build_ui(settings: Dictionary) -> void:
 	add_child(back_btn)
 
 	var back_style := StyleBoxFlat.new()
-	back_style.bg_color = Color("34495e")
+	back_style.bg_color = Color("a0628a")
 	back_style.corner_radius_top_left = 12
 	back_style.corner_radius_top_right = 12
 	back_style.corner_radius_bottom_left = 12
 	back_style.corner_radius_bottom_right = 12
 	back_btn.add_theme_stylebox_override("normal", back_style)
 	var back_hover: StyleBoxFlat = back_style.duplicate() as StyleBoxFlat
-	back_hover.bg_color = Color("4a6785")
+	back_hover.bg_color = Color("b87399")
 	back_btn.add_theme_stylebox_override("hover", back_hover)
 	back_btn.add_theme_color_override("font_color", Color.WHITE)
 	back_btn.add_theme_font_size_override("font_size", 20)
@@ -102,7 +102,7 @@ func _add_section_label(parent: Control, text: String) -> void:
 	var label := Label.new()
 	label.text = text
 	label.add_theme_font_size_override("font_size", 22)
-	label.add_theme_color_override("font_color", Color("f39c12"))
+	label.add_theme_color_override("font_color", Color("e84393"))
 	parent.add_child(label)
 
 
@@ -115,7 +115,7 @@ func _add_slider(parent: Control, label_text: String, initial_value: float,
 	label.text = label_text
 	label.custom_minimum_size.x = 150
 	label.add_theme_font_size_override("font_size", 16)
-	label.add_theme_color_override("font_color", Color.WHITE)
+	label.add_theme_color_override("font_color", Color("6b3a5c"))
 	hbox.add_child(label)
 
 	var slider := HSlider.new()
@@ -132,7 +132,7 @@ func _add_slider(parent: Control, label_text: String, initial_value: float,
 	value_label.text = "%d%%" % int(initial_value * 100)
 	value_label.custom_minimum_size.x = 50
 	value_label.add_theme_font_size_override("font_size", 14)
-	value_label.add_theme_color_override("font_color", Color("bdc3c7"))
+	value_label.add_theme_color_override("font_color", Color("a0628a"))
 	hbox.add_child(value_label)
 
 	slider.value_changed.connect(func(val: float) -> void:
@@ -151,7 +151,7 @@ func _add_toggle(parent: Control, label_text: String, initial_value: bool,
 	label.text = label_text
 	label.custom_minimum_size.x = 200
 	label.add_theme_font_size_override("font_size", 16)
-	label.add_theme_color_override("font_color", Color.WHITE)
+	label.add_theme_color_override("font_color", Color("6b3a5c"))
 	hbox.add_child(label)
 
 	var toggle := CheckButton.new()
