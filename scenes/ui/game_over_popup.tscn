@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxpopup0001"]
+
+[ext_resource type="Script" path="res://scripts/ui/game_over_popup.gd" id="1_popup"]
+
+[node name="GameOverPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_popup")
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -160.0
+offset_right = 180.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = "Level Complete!"
+horizontal_alignment = 1
+
+[node name="StarsLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = "★★★"
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = "Score: 0"
+horizontal_alignment = 1
+
+[node name="MessageLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = ""
+horizontal_alignment = 1
+
+[node name="ButtonRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="RetryButton" type="Button" parent="Panel/VBox/ButtonRow"]
+layout_mode = 2
+text = "Retry"
+custom_minimum_size = 90 40
+
+[node name="NextButton" type="Button" parent="Panel/VBox/ButtonRow"]
+layout_mode = 2
+text = "Next"
+custom_minimum_size = 90 40
+
+[node name="MenuButton" type="Button" parent="Panel/VBox/ButtonRow"]
+layout_mode = 2
+text = "Menu"
+custom_minimum_size = 90 40

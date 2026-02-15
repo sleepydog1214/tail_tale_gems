@@ -1,0 +1,141 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxgame00001"]
+
+[ext_resource type="Script" path="res://scripts/board/board_controller.gd" id="1_controller"]
+[ext_resource type="Script" path="res://scripts/board/board_view.gd" id="2_boardview"]
+[ext_resource type="Script" path="res://scripts/ui/hud.gd" id="3_hud"]
+[ext_resource type="Script" path="res://scripts/ui/game_over_popup.gd" id="4_popup"]
+
+[node name="GameScreen" type="Node2D"]
+script = ExtResource("1_controller")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 540.0
+offset_bottom = 960.0
+mouse_filter = 2
+color = Color(0.08, 0.1, 0.18, 1.0)
+
+[node name="BoardView" type="Node2D" parent="."]
+script = ExtResource("2_boardview")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="UILayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_hud")
+
+[node name="LevelLabel" type="Label" parent="UILayer/HUD"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 4.0
+offset_right = 200.0
+offset_bottom = 28.0
+text = "Level 1"
+
+[node name="MovePanel" type="PanelContainer" parent="UILayer/HUD"]
+layout_mode = 1
+offset_left = 430.0
+offset_top = 4.0
+offset_right = 530.0
+offset_bottom = 50.0
+
+[node name="MoveLabel" type="Label" parent="UILayer/HUD/MovePanel"]
+layout_mode = 2
+text = "25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScorePanel" type="PanelContainer" parent="UILayer/HUD"]
+layout_mode = 1
+offset_left = 200.0
+offset_top = 4.0
+offset_right = 340.0
+offset_bottom = 50.0
+
+[node name="ScoreLabel" type="Label" parent="UILayer/HUD/ScorePanel"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ObjectivePanel" type="PanelContainer" parent="UILayer/HUD"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 32.0
+offset_right = 530.0
+offset_bottom = 110.0
+
+[node name="ObjectiveList" type="VBoxContainer" parent="UILayer/HUD/ObjectivePanel"]
+layout_mode = 2
+
+[node name="GameOverPopup" type="Control" parent="UILayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("4_popup")
+
+[node name="Panel" type="PanelContainer" parent="UILayer/GameOverPopup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -160.0
+offset_right = 180.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="UILayer/GameOverPopup/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="UILayer/GameOverPopup/Panel/VBox"]
+layout_mode = 2
+text = "Level Complete!"
+horizontal_alignment = 1
+
+[node name="StarsLabel" type="Label" parent="UILayer/GameOverPopup/Panel/VBox"]
+layout_mode = 2
+text = "★★★"
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="UILayer/GameOverPopup/Panel/VBox"]
+layout_mode = 2
+text = "Score: 0"
+horizontal_alignment = 1
+
+[node name="MessageLabel" type="Label" parent="UILayer/GameOverPopup/Panel/VBox"]
+layout_mode = 2
+text = ""
+horizontal_alignment = 1
+
+[node name="ButtonRow" type="HBoxContainer" parent="UILayer/GameOverPopup/Panel/VBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="RetryButton" type="Button" parent="UILayer/GameOverPopup/Panel/VBox/ButtonRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(90, 40)
+text = "Retry"
+
+[node name="NextButton" type="Button" parent="UILayer/GameOverPopup/Panel/VBox/ButtonRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(90, 40)
+text = "Next"
+
+[node name="MenuButton" type="Button" parent="UILayer/GameOverPopup/Panel/VBox/ButtonRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(90, 40)
+text = "Menu"

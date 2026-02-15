@@ -1,0 +1,57 @@
+{
+  "level_id": 5,
+  "chapter": 1,
+  "room": 1,
+  "difficulty": "TUTORIAL",
+  "title": "Explosive Discovery",
+
+  "board": {
+    "width": 7,
+    "height": 9,
+    "layout": [
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1]
+    ],
+    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ"]
+  },
+
+  "move_limit": 30,
+
+  "objectives": [
+    {
+      "type": "CREATE_POWERUP",
+      "params": { "powerup": "BOMB", "powerup_name": "Bombs", "count": 1 }
+    },
+    {
+      "type": "COLLECT_COLOR",
+      "params": { "color": "EMERALD", "count": 15 }
+    }
+  ],
+
+  "blockers": [],
+  "special_tiles": [],
+  "portals": [],
+  "conveyors": [],
+
+  "rewards": {
+    "coins_base": 60,
+    "coins_per_remaining_move": 5,
+    "star_thresholds": {
+      "1_star": 0,
+      "2_star": 10,
+      "3_star": 20
+    }
+  },
+
+  "metadata": {
+    "designer": "auto",
+    "notes": "Tutorial level 5: teaches L/T match-5 to create Bombs. Full 7x9 board."
+  }
+}

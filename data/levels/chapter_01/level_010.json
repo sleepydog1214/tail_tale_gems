@@ -1,0 +1,67 @@
+{
+  "level_id": 10,
+  "chapter": 1,
+  "room": 1,
+  "difficulty": "EASY",
+  "title": "The Grand Hall",
+
+  "board": {
+    "width": 7,
+    "height": 9,
+    "layout": [
+      [0,1,1,1,1,1,0],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [0,1,1,1,1,1,0]
+    ],
+    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ"]
+  },
+
+  "move_limit": 25,
+
+  "objectives": [
+    {
+      "type": "REMOVE_BLOCKER",
+      "params": { "blocker": "CRATE", "count": 8 }
+    },
+    {
+      "type": "SCORE_TARGET",
+      "params": { "score": 2000 }
+    }
+  ],
+
+  "blockers": [
+    { "row": 2, "col": 1, "type": "CRATE", "hp": 1 },
+    { "row": 2, "col": 5, "type": "CRATE", "hp": 1 },
+    { "row": 3, "col": 2, "type": "CRATE", "hp": 1 },
+    { "row": 3, "col": 4, "type": "CRATE", "hp": 1 },
+    { "row": 5, "col": 2, "type": "CRATE", "hp": 1 },
+    { "row": 5, "col": 4, "type": "CRATE", "hp": 1 },
+    { "row": 6, "col": 1, "type": "CRATE", "hp": 1 },
+    { "row": 6, "col": 5, "type": "CRATE", "hp": 1 }
+  ],
+
+  "special_tiles": [],
+  "portals": [],
+  "conveyors": [],
+
+  "rewards": {
+    "coins_base": 60,
+    "coins_per_remaining_move": 8,
+    "star_thresholds": {
+      "1_star": 0,
+      "2_star": 8,
+      "3_star": 16
+    }
+  },
+
+  "metadata": {
+    "designer": "auto",
+    "notes": "Easy level 5: chapter 1 finale. Shaped board, 8 crates + score target. Most challenging so far."
+  }
+}

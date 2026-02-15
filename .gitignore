@@ -1,0 +1,65 @@
+# Godot 4 generated files
+.godot/
+*.import
+
+# Mono/C# generated files
+.mono/
+data_*/
+mono_crash.*.json
+
+# Godot export templates & builds
+*.translation
+export_presets.cfg
+*.pck
+*.exe
+!godot/**
+
+# Godot engine binary (large, don't commit)
+godot/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# VS Code
+.vscode/
+
+# JetBrains (Rider, IntelliJ, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+atlassian-ide-plugin.xml
+cmake-build-*/
+out/
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+*.un~
+
+# Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+*.csproj.user
+
+# Test output
+test_results.txt
+test_stdout.txt
+test_stderr.txt
+game_output.txt
+game_stdout.txt
+game_stderr.txt
+
+# Logs
+*.log

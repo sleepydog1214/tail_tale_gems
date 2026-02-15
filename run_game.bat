@@ -1,0 +1,3 @@
+@echo off
+echo Starting Gem Kingdoms...
+start "" "%~dp0godot\Godot_v4.6-stable_mono_win64\Godot_v4.6-stable_mono_win64.exe" --path "%~dp0"

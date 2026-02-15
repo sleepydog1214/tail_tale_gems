@@ -1,0 +1,3 @@
+@echo off
+echo Opening Godot Editor...
+start "" "%~dp0godot\Godot_v4.6-stable_mono_win64\Godot_v4.6-stable_mono_win64.exe" --editor --path "%~dp0"

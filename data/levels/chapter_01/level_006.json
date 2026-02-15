@@ -1,0 +1,62 @@
+{
+  "level_id": 6,
+  "chapter": 1,
+  "room": 1,
+  "difficulty": "EASY",
+  "title": "Crate Encounter",
+
+  "board": {
+    "width": 7,
+    "height": 9,
+    "layout": [
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1]
+    ],
+    "gem_pool": ["RUBY", "SAPPHIRE", "EMERALD", "TOPAZ"]
+  },
+
+  "move_limit": 35,
+
+  "objectives": [
+    {
+      "type": "REMOVE_BLOCKER",
+      "params": { "blocker": "CRATE", "count": 3 }
+    },
+    {
+      "type": "COLLECT_COLOR",
+      "params": { "color": "RUBY", "count": 15 }
+    }
+  ],
+
+  "blockers": [
+    { "row": 3, "col": 2, "type": "CRATE", "hp": 1 },
+    { "row": 3, "col": 4, "type": "CRATE", "hp": 1 },
+    { "row": 5, "col": 3, "type": "CRATE", "hp": 1 }
+  ],
+
+  "special_tiles": [],
+  "portals": [],
+  "conveyors": [],
+
+  "rewards": {
+    "coins_base": 60,
+    "coins_per_remaining_move": 8,
+    "star_thresholds": {
+      "1_star": 0,
+      "2_star": 11,
+      "3_star": 23
+    }
+  },
+
+  "metadata": {
+    "designer": "auto",
+    "notes": "Easy level 1: introduces Crate blockers. Only 3 crates to ease the player in."
+  }
+}
