@@ -34,6 +34,10 @@ window/size/viewport_height=960
 window/stretch/mode="canvas_items"
 window/handheld/orientation=1
 
+[dotnet]
+
+project/assembly_name="Tail Tale Match"
+
 [input]
 
 ui_accept={
