@@ -65,3 +65,11 @@ game_stderr.txt
 *.log
 diag_*.txt
 docs/
+
+# Temporary and build files
+build/
+android/build/
+android/.build_version
+next-steps.txt
+nul
+*.tmp

@@ -61,6 +61,16 @@ In PowerShell (no pause):
 exit $LASTEXITCODE
 ```
 
+## Build & Run on Android (Windows)
+
+For instructions on setting up your environment for Android development, see [ANDROID_SETUP.md](ANDROID_SETUP.md).
+
+Once set up, you can use these scripts:
+- `export_android_debug.bat`: Export a debug APK.
+- `export_android_release.bat`: Export a release APK.
+- `install_android.bat`: Install the debug APK to a connected device.
+- `run_android.bat`: Launch the app on the connected device.
+
 ## Project structure
 
 - `scenes/`
