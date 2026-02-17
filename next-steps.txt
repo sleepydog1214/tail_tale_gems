@@ -1,0 +1,75 @@
+Tail Tale Match — suggested next steps
+===================================
+
+This document lists improvements discovered during a quick code-quality review.
+It is intentionally practical and prioritized.
+
+P0 (clarity / correctness)
+-------------------------
+1) Decide on and standardize the game name.
+   - `project.godot` uses `Tail Tale Match` while multiple docs/log strings say `Gem Kingdoms`.
+   - Pick one "public" name, then update:
+     - docs (`ARCHITECTURE.md`, `DESIGN_DOCUMENT.md`),
+     - console banners in `tests/test_match_engine.gd`,
+     - `run_game.bat` echo text, and any UI strings.
+
+2) Fix/clarify how tests are invoked.
+   - `test_results.txt` shows a failed attempt to run `tests/test_match_engine.gd` directly
+     (Godot expects `SceneTree`/`MainLoop` when using certain invocation styles).
+   - The correct and working entry appears to be `res://tests/test_match_engine.tscn`.
+   - Consider updating the comment at the top of `tests/test_match_engine.gd` to match.
+
+P1 (maintainability)
+-------------------
+3) Split `scripts/board/match_engine.gd` into smaller modules.
+   - It’s currently very large (~900+ lines). A typical cut is:
+     - `match_finder.gd` (scan + group matches)
+     - `powerup_rules.gd` (creation + combo mapping)
+     - `gravity.gd` / `spawner.gd`
+     - `objective_tracker.gd`
+   - Keep a thin `MatchEngine` facade that orchestrates and emits signals.
+
+4) Tighten typing and data contracts.
+   - Several places use untyped `Array`/`Dictionary` for structured data.
+   - Add typed DTO-ish helpers for level JSON parsing (even if still `Dictionary` at the boundary),
+     and standardize the internal event payload shapes sent via signals.
+
+5) Reduce implicit global coupling where it helps.
+   - Autoload singletons are convenient, but they make tests and reuse harder.
+   - Where practical, pass dependencies into screens/controllers (e.g., a `GameServices` object)
+     or centralize access behind `GameManager`.
+
+P2 (tooling / developer experience)
+----------------------------------
+6) Make `run_tests.bat` non-interactive (or add a CI variant).
+   - The current `pause` is great locally but blocks CI.
+   - Options:
+     - Add `run_tests_ci.bat` without `pause`, or
+     - Make pausing optional via an argument.
+
+7) Add a minimal CI pipeline.
+   - Run headless tests on pushes/PRs.
+   - Archive the console output.
+
+P2 (robustness)
+---------------
+8) Level data validation.
+   - `LevelLoader` is straightforward and readable.
+   - Add validation for:
+     - out-of-range blocker coordinates,
+     - invalid gem pool strings (currently filtered to `NONE`),
+     - required keys (level_id/move_limit/layout dimensions),
+     - schema versioning if the format will evolve.
+
+9) Save data migration tests.
+   - `SaveManager` has `SAVE_VERSION` and does versioning.
+   - Add a couple test fixtures (old save JSON) to ensure migrations are stable.
+
+P3 (content & UX)
+-----------------
+10) Replace placeholder music with real assets (or remove stubs).
+    - `AudioManager.play_music()` currently does nothing by design.
+    - Either wire up `assets/audio/music/` or clearly mark music as "not implemented" in UI.
+
+11) Add a short contributor guide.
+    - Document Godot version expectations, export presets, and a "where to add a new level" checklist.
